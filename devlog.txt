@@ -1,10 +1,10 @@
-<Team Name>
-<Member 0 Name>
-<Member 1 Name>
-<Member 2 Name>
-pd <pd#>
+BigBird
+Jun Hong Wang
+Ruiwen (Raven) Tang
+Michael Kamela
+pd 6
 ---------------------
-<Project Summary / Working Title>
+Birdie's Mockeria
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -61,9 +61,9 @@ tales of wisdom gained...
 ==============================================================
 
 
-yyyy-mm-dd
+2022-05-25
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
+Jun Hong and Raven :: Configured work repo as directed, filled out readme with project desc and how-to-launch instructions
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
