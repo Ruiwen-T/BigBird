@@ -7,7 +7,11 @@ Mock Papa's Pizzeria using Processing, stacks, queues
 * User can interact using mouse and key inputs
 
 How-to-launch
+
 $ git pull
+
 $ cd Woo
+
 $ processing &
+
 File -> Open -> Woo.pde
