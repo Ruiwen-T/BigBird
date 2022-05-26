@@ -1,0 +1,3 @@
+class Toppings implements Station {
+
+}

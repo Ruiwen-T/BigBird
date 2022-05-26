@@ -1,0 +1,3 @@
+class Cashier implements Station {
+
+}

@@ -1,0 +1,2 @@
+class Serve implements Station {
+}

@@ -1,0 +1,3 @@
+class Dough implements Station {
+
+}
