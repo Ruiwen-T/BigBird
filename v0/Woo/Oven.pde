@@ -1,2 +1,3 @@
 class Oven implements Station {
+  
 }

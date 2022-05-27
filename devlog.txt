@@ -72,3 +72,8 @@ Raven :: Configured work repo as directed, filled out readme with project desc a
 Jun Hong :: Created team flag, wrote up proprosal, outlined necessary classes and began forming UML diagrams for each planned class
 Raven :: Created team flag, wrote up proprosal, outlined necessary classes and began forming UML diagrams for each planned class
 ==============================================================
+
+2022-05-27
+--------------------------------------------------------------
+Jun Hong :: Updated gitignore with boss gitignore
+=============================================================

@@ -1,2 +1,3 @@
 class Cut implements Station {
+  
 }
