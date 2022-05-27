@@ -1,5 +1,13 @@
+import java.util.LinkedList;
+
 class Game {
-  void setup() {}
+  Game() {
+    
+  }
+  
+  void setup() {
+    size(750, 750);
+  }
 
   void draw() {}
 }

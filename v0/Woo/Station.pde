@@ -4,7 +4,10 @@
 //instead of making our own node, we can make this interface have different methods
 interface Station {
   //get left
-  Station leftStation();
+  //Station leftStation();
   //get right
-  Station rightStation();
+  //Station rightStation();
+  
+  //shows order in corner of screen using text and squares
+  void showOrder();
 }
