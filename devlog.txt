@@ -63,8 +63,12 @@ tales of wisdom gained...
 
 2022-05-25
 --------------------------------------------------------------
-Jun Hong and Raven :: Configured work repo as directed, filled out readme with project desc and how-to-launch instructions
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Jun Hong :: Configured work repo as directed, filled out readme with project desc and how-to-launch instructions
+Raven :: Configured work repo as directed, filled out readme with project desc and how-to-launch instructions
 ==============================================================
 
+2022-05-26
+--------------------------------------------------------------
+Jun Hong :: Created team flag, wrote up proprosal, outlined necessary classes and began forming UML diagrams for each planned class
+Raven :: Created team flag, wrote up proprosal, outlined necessary classes and began forming UML diagrams for each planned class
+==============================================================
