@@ -47,6 +47,7 @@ we changed ___ to ___ bc...
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
+* UML diagram before coding is very helpful!! (flesh out this point later)
 ||||||||||||||||||||||||||||||||||||||||||
 
 
