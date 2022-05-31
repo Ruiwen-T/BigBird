@@ -77,3 +77,9 @@ Raven :: Created team flag, wrote up proprosal, outlined necessary classes and b
 --------------------------------------------------------------
 Jun Hong :: Updated gitignore with boss gitignore
 =============================================================
+
+2022-05-30
+--------------------------------------------------------------
+Jun Hong :: Wrote up UML diagram for all classes and described relationships btw classes
+Raven :: Wrote up UML diagram for all classes and described relationships btw classes
+=============================================================
