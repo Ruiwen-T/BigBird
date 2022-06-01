@@ -1,12 +1,22 @@
 class Topping {
   int clickEvenness;
   int[] clickCount;
+  String name;
   
   Topping() {
     clickEvenness = 0; 
     clickCount = new int[4];
   }
   
-  int getClickEvenness();
-  int[] getClickCount();
+  Topping(String n) {
+    this();
+    name = n;
+  }
+  
+  int getClickEvenness() {}
+  int[] getClickCount() {}
+  
+  String getName() {
+    return name;
+  }
 }

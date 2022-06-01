@@ -91,3 +91,8 @@ Jun Hong :: Created v1, set up all classes with methods & variables based on UML
 Raven :: Created v1, set up all classes with methods & variables based on UML diagram, created flowchart of state transitions, started code implementation for Woo, Station, Topping, Pizza
 Michael :: Created v1, set up all classes with methods & variables based on UML diagram, started code implementation for Woo, Station, Topping, Pizza
 ==============================================================
+
+2022-06-01
+--------------------------------------------------------------
+All :: Pizza class works (java), implemented and tested genPizza() in Woo
+==============================================================
