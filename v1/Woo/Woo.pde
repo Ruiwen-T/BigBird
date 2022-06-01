@@ -6,7 +6,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Woo {
+//class Woo {
   Queue<Pizza> orders;
   Queue<Pizza> pizzas; 
   LinkedList<Station> stations; 
@@ -19,19 +19,25 @@ class Woo {
     Topping tomato = new Topping();
   }
   
-  int getCurrStation() {}
+  int getCurrStation() {
+    return currStation;
+  }
   
-  Queue getQOrders() {}
+  Queue getQOrders() {
+    return orders;
+  }
   
-  Queue getQPizzas() {}
+  Queue getQPizzas() {
+    return pizzas;
+  }
   
   Pizza genPizza() {
-    int o = 1 + (Math.random() * 3);
-    int c = Math.random() * 5;
-    int r = Math.random();
+    int o = (int)(1 + (Math.random() * 3));
+    int c = (int)(Math.random() * 5);
+    int r = (int)Math.random();
   }
   
   static void main() {
     
   }
-}
+//}
