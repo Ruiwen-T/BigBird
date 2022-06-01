@@ -87,5 +87,7 @@ Raven :: Wrote up UML diagram for all classes and described relationships btw cl
 
 2022-05-31
 --------------------------------------------------------------
-All :: Created v1, set up all classes based on UML diagram
+Jun Hong :: Created v1, set up all classes with methods & variables based on UML diagram, created flowchart of state transitions, started code implementation for Woo, Station, Topping, Pizza
+Raven :: Created v1, set up all classes with methods & variables based on UML diagram, created flowchart of state transitions, started code implementation for Woo, Station, Topping, Pizza
+Michael :: Created v1, set up all classes with methods & variables based on UML diagram, started code implementation for Woo, Station, Topping, Pizza
 ==============================================================
