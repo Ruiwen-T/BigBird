@@ -1,13 +1,31 @@
-class Oven implements Station {
-  boolean done;
-  int time;
+import java.util.Queue;
+
+public class Oven implements Station {
+  private boolean done;
+  private int time;
+  private String name;
+
+  public Oven(String n){
+    name = n;
+    done = false;
+    time = 0;
+  }
   
-  void showOrder() {
+  public void showOrder(Queue q) {
     
   }
   
-  void loadScene() {}
-  int getTime() {}
+  public void loadScene() {}
+
+  public int getTime() {
+    return time;
+  }
   
-  boolean done() {}
+  public boolean done() {
+    return done;
+  }
+
+  public String getName(){
+    return name;
+  }
 }

@@ -8,6 +8,7 @@ import java.util.Queue;
 import java.util.Stack;
 
 public class Woo {
+  //instance variables
   private Queue<Pizza> orders;
   private Queue<Pizza> pizzas;
   private LinkedList<Station> stations;
@@ -15,6 +16,7 @@ public class Woo {
   private double[] scores;
   private Topping[] toppings;
 
+  //default constructor
   public Woo() {
     //initializing array of toppings for future use
     toppings = new Topping[8];
@@ -37,7 +39,8 @@ public class Woo {
     pizzas = new Queue<Pizza>();
 
     //initializing stations
-    
+    stations = new LinkedList<Station>();
+
   }
 
   public int getCurrStation() {

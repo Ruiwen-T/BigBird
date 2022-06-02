@@ -1,15 +1,24 @@
 import java.util.Queue;
 
-class Serve implements Station {
-  boolean done;
+public class Serve implements Station {
+  private boolean done;
+  private String name;
   
-  void showOrder() {
+  public void showOrder(Queue q) {
     
   }
   
-  void loadScene() {}
+  public void loadScene() {}
   
-  double checkPizza(Queue orders, Queue pizzas) {}
+  public double checkPizza(Queue orders, Queue pizzas) {
+    return -1.0;
+  }
   
-  boolean done() {}
+  public boolean done() {
+    return done;
+  }
+
+  public String getName(){
+    return name;
+  }
 }

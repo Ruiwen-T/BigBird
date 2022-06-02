@@ -1,14 +1,31 @@
-class Cut implements Station {
-  boolean done;
-  int cuts;
+import java.util.Queue;
+
+public class Cut implements Station {
+  private boolean done;
+  private int cuts;
+  private String name;
   
-  void showOrder() {
+  public Cut(String n){
+    name = n;
+    done = false;
+    cuts = 0;
+  }
+  public void showOrder(Queue q) {
     
   }
   
-  void loadScene() {}
+  public void loadScene() {}
   
-  int getCuts();
+  public int getCuts(){
+    return cuts;
+  }
   
-  boolean done() {}
+  public boolean done() {
+    return done;
+  }
+
+  public String getName(){
+    return name;
+  }
+
 }

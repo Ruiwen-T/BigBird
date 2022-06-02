@@ -1,15 +1,25 @@
-class Cashier implements Station {
-  boolean done;
+import java.util.Queue;
+
+public class Cashier implements Station {
+  private boolean done;
+  private String name;
 
   public Cashier(String n) {
+    name = n;
+    done = false;
+  }
+
+  public void showOrder(Queue q) {
 
   }
 
-  void showOrder() {
+  public void loadScene() {}
 
+  public boolean done() {
+    return done;
   }
 
-  void loadScene() {}
-
-  boolean done() {}
+  public String getName(){
+    return name;
+  }
 }

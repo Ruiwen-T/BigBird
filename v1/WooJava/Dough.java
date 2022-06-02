@@ -1,14 +1,30 @@
-class Dough implements Station {
-  boolean done;
-  int clickCount;
+import java.util.Queue;
+public class Dough implements Station {
+  private boolean done;
+  private int clickCount;
+  private String name;
+
+  public Dough(String n){
+    name = n;
+    done = false;
+    clickCount = 0;
+  }
   
-  void showOrder() {
+  public void showOrder(Queue q) {
     
   }
   
-  void loadScene() {}
+  public void loadScene() {}
   
-  int getClickCount() {}
+  public int getClickCount() {
+    return clickCount;
+  }
   
-  boolean done() {}
+  public boolean done() {
+    return done;
+  }
+
+  public String getName(){
+    return name;
+  }
 }
