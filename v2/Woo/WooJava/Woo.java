@@ -6,7 +6,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
-import java.util.Iterator;
 
 public class Woo {
   //instance variables
@@ -41,22 +40,7 @@ public class Woo {
 
     //initializing stations
     stations = new LinkedList<Station>();
-    stations.add(new Cashier("cashier"));
-    stations.add(new Dough("dough"));
-    stations.add(new ToppingS("toppingS"));
-    stations.add(new Oven("oven"));
-    stations.add(new Cut("cut"));
-    stations.add(new Serve("serve"));
 
-    for (int i = 0; i < 6; i++) {
-      Iterator it = stations.iterator();
-      while (it.hasNext()) {
-        Station next = (Station)it.next();
-        next.loadScene();
-        next.showOrder(orders);
-
-      }
-    }
   }
 
   public int getCurrStation() {
@@ -85,7 +69,6 @@ public class Woo {
 
   public static void main(String[] args) {
     Woo w1 = new Woo();
-    //pizza generation testing
-    //System.out.println(w1.genPizza());
+    System.out.println(w1.genPizza());
   }
 }

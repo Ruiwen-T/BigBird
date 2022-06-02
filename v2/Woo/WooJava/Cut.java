@@ -1,24 +1,25 @@
 import java.util.Queue;
 
-public class Serve implements Station {
+public class Cut implements Station {
   private boolean done;
+  private int cuts;
   private String name;
-
-  public Serve(String n) {
+  
+  public Cut(String n){
     name = n;
     done = false;
+    cuts = 0;
   }
-
-  public void showOrder(LLQueue q) {
-
+  public void showOrder(Queue q) {
+    
   }
-
+  
   public void loadScene() {}
-
-  public double checkPizza(LLQueue orders, LLQueue pizzas) {
-    return -1.0;
+  
+  public int getCuts(){
+    return cuts;
   }
-
+  
   public boolean done() {
     return done;
   }
@@ -26,4 +27,5 @@ public class Serve implements Station {
   public String getName(){
     return name;
   }
+
 }

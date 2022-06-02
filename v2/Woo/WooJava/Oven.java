@@ -1,24 +1,26 @@
 import java.util.Queue;
 
-public class Serve implements Station {
+public class Oven implements Station {
   private boolean done;
+  private int time;
   private String name;
 
-  public Serve(String n) {
+  public Oven(String n){
     name = n;
     done = false;
+    time = 0;
   }
-
-  public void showOrder(LLQueue q) {
-
+  
+  public void showOrder(Queue q) {
+    
   }
-
+  
   public void loadScene() {}
 
-  public double checkPizza(LLQueue orders, LLQueue pizzas) {
-    return -1.0;
+  public int getTime() {
+    return time;
   }
-
+  
   public boolean done() {
     return done;
   }

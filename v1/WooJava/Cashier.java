@@ -9,7 +9,7 @@ public class Cashier implements Station {
     done = false;
   }
 
-  public void showOrder(Queue q) {
+  public void showOrder(LLQueue q) {
 
   }
 

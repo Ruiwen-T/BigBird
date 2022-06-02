@@ -43,6 +43,8 @@ wow! oo!...
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
+* iterator added
+* realization of usage of linkedlist
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,4 +100,10 @@ Michael :: Created v1, set up all classes with methods & variables based on UML 
 Jun Hong :: Brought Pizza class to compilation success, implemented and tested genPizza() in Woo, implemented accessor methods, instance variables, and overloaded constructors for all classes that implement the Station interface (Cashier, Cut, dough, Oven, Serve, ToppingS), added LLQueue class, worked on default constructor for Woo
 Raven :: Brought Pizza class to compilation success, implemented and tested genPizza() in Woo, implemented accessor methods, instance variables, and overloaded constructors for all classes that implement the Station interface (Cashier, Cut, dough, Oven, Serve, ToppingS), added LLQueue class, worked on default constructor for Woo
 Michael :: Brought Pizza class to compilation success, implemented and tested genPizza() in Woo
+==============================================================
+
+2022-06-02
+--------------------------------------------------------------
+All :: Updated UML diagrams with new methods and instance variables
+All :: Updated Woo constructor with beginning of gameplay and created LL of stations
 ==============================================================

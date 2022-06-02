@@ -9,17 +9,17 @@ public class Dough implements Station {
     done = false;
     clickCount = 0;
   }
-  
-  public void showOrder(Queue q) {
-    
+
+  public void showOrder(LLQueue q) {
+
   }
-  
+
   public void loadScene() {}
-  
+
   public int getClickCount() {
     return clickCount;
   }
-  
+
   public boolean done() {
     return done;
   }

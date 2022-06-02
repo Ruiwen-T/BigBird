@@ -1,24 +1,25 @@
 import java.util.Queue;
-
-public class Serve implements Station {
+public class Dough implements Station {
   private boolean done;
+  private int clickCount;
   private String name;
 
-  public Serve(String n) {
+  public Dough(String n){
     name = n;
     done = false;
+    clickCount = 0;
   }
-
-  public void showOrder(LLQueue q) {
-
+  
+  public void showOrder(Queue q) {
+    
   }
-
+  
   public void loadScene() {}
-
-  public double checkPizza(LLQueue orders, LLQueue pizzas) {
-    return -1.0;
+  
+  public int getClickCount() {
+    return clickCount;
   }
-
+  
   public boolean done() {
     return done;
   }

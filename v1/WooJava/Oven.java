@@ -10,17 +10,17 @@ public class Oven implements Station {
     done = false;
     time = 0;
   }
-  
-  public void showOrder(Queue q) {
-    
+
+  public void showOrder(LLQueue q) {
+
   }
-  
+
   public void loadScene() {}
 
   public int getTime() {
     return time;
   }
-  
+
   public boolean done() {
     return done;
   }

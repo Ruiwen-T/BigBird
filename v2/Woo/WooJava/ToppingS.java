@@ -2,7 +2,7 @@ import java.util.Stack;
 import java.util.Queue;
 
 public class ToppingS implements Station {
-  private boolean done;
+  private boolean done; 
   private Stack<Topping> toppings;
   private int[] clickEvenness;
   private int[][] clickCount;
@@ -16,23 +16,19 @@ public class ToppingS implements Station {
     clickCount = new int[4][8];
 
   }
-
-  public void showOrder(LLQueue q) {
-
+  
+  public void showOrder(Queue q) {
+    
   }
-
+  
   public void loadScene() {}
-
+  
   public int[][] getClickCount() {
     return clickCount;
-  }
-
+  } 
+  
   public int[] getClickEvenness() {
     return clickEvenness;
-  }
-
-  public boolean done() {
-    return done;
   }
 
   public String getName(){
