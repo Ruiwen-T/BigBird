@@ -15,10 +15,6 @@ public class Serve implements Station {
 
   public void loadScene() {}
 
-  public double checkPizza(LLQueue orders, LLQueue pizzas) {
-    return -1.0;
-  }
-
   public boolean done() {
     return done;
   }
@@ -26,4 +22,9 @@ public class Serve implements Station {
   public String getName(){
     return name;
   }
+  
+  public double checkPizza(LLQueue orders, LLQueue pizzas) {
+    return -1.0;
+  }
+
 }

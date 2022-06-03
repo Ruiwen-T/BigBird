@@ -39,29 +39,32 @@ maybe some of these will move into the Obs.Ovrcm section...
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
+* Processing actually converts all code into Java code first, which can then run.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
 * iterator added
 * realization of usage of linkedlist
+* started with Processing, but thought it would be easier to get down the underlying aspects of the game before graphics so moved to Java
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
 * UML diagram before coding is very helpful!! (flesh out this point later)
 * Queue is an interface and therefore abstract. If you want to use a Queue, you need to use one of its implementations (something that implements the Queue interface), or else you won't be able to construct it nor use enqueue/dequeue/etc methods
+* Because Processing converts code into Java code, all code inside a .pde file will become code inside a class with the same name as the file. This means any class we declare inside .pde must not have the same name as the file. 
 ||||||||||||||||||||||||||||||||||||||||||
 
 
 
- ______   ______   __   __   __       ______   _______     
-/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
-\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
- \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
-  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
-   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
-    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
 ==============================================================
 
 
@@ -106,4 +109,6 @@ Michael :: Brought Pizza class to compilation success, implemented and tested ge
 --------------------------------------------------------------
 All :: Updated UML diagrams with new methods and instance variables
 All :: Updated Woo constructor with beginning of gameplay and created LL of stations
+All :: Began work on v2, now with use of Iterator
+Jun Hong :: Began working in Processing again, beginning with graphics
 ==============================================================

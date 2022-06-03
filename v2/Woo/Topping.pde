@@ -1,22 +1,27 @@
-class Topping {
-  int clickEvenness;
-  int[] clickCount;
-  String name;
-  
-  Topping() {
-    clickEvenness = 0; 
+public class Topping {
+  private int clickEvenness;
+  private int[] clickCount;
+  private String name;
+
+  public Topping() {
+    clickEvenness = 0;
     clickCount = new int[4];
   }
-  
-  Topping(String n) {
+
+  public Topping(String n) {
     this();
     name = n;
   }
+
+  public int getClickEvenness() {
+    return 0;
+  }
   
-  int getClickEvenness() {}
-  int[] getClickCount() {}
-  
-  String getName() {
+  public int[] getClickCount() {
+    return new int[1];
+  }
+
+  public String getName() {
     return name;
   }
 }

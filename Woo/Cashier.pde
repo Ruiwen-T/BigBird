@@ -1,11 +1,28 @@
+import java.util.Queue;
+
 class Cashier implements Station {
-  boolean done;
-  
-  void showOrder() {
+  private boolean done;
+  private String name;
+
+  public Cashier(String n) {
+    name = n;
+    done = false;
+  }
+
+  public void showOrder(LLQueue q) {
     
   }
-  
-  void loadScene() {}
-  
-  boolean done() {}
+
+  public void loadScene() {
+    //size(750, 750);
+    //background(0);
+  }
+
+  public boolean done() {
+    return done;
+  }
+
+  public String getName(){
+    return name;
+  }
 }

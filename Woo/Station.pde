@@ -1,12 +1,13 @@
 import java.util.Queue;
 
 interface Station {
-  //boolean done;
-  
+
   //shows order in corner of screen using text and squares
-  void showOrder(Queue q);
-  
+  void showOrder(LLQueue q);
+
   void loadScene();
-  
+
   boolean done();
+
+  String getName();
 }

@@ -1,21 +1,45 @@
 import java.util.Stack;
+import java.util.Queue;
 
-class ToppingS implements Station {
-  boolean done; 
-  Stack<Topping> toppings;
-  int tProgress;
-  int[] clickEvenness;
-  int[] clickCount;
-  
-  void showOrder() {
+public class ToppingS implements Station {
+  private boolean done;
+  private Stack<Topping> toppings;
+  private int[] clickEvenness;
+  private int[][] clickCount;
+  private String name;
+
+  public ToppingS(String n){
+    name = n;
+    done = false;
+    toppings = new Stack<Topping>();
+    clickEvenness = new int[8];
+    clickCount = new int[4][8];
+
+  }
+
+  public void showOrder(LLQueue q) {
+
+  }
+
+  public void loadScene() {
     
   }
+
+  public boolean done() {
+    return done;
+  }
+
+  public String getName(){
+    return name;
+  }
   
-  void loadScene() {}
-  
-  int[][] getClickCount() {} 
-  
-  int[] getClickEvenness() {}
-  
-  void showOrder(Queue q) {}
+  public int[][] getClickCount() {
+    return clickCount;
+  }
+
+  public int[] getClickEvenness() {
+    return clickEvenness;
+  }
+
+
 }

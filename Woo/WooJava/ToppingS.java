@@ -23,6 +23,14 @@ public class ToppingS implements Station {
 
   public void loadScene() {}
 
+  public boolean done() {
+    return done;
+  }
+
+  public String getName(){
+    return name;
+  }
+  
   public int[][] getClickCount() {
     return clickCount;
   }
@@ -31,12 +39,5 @@ public class ToppingS implements Station {
     return clickEvenness;
   }
 
-  public boolean done() {
-    return done;
-  }
-
-  public String getName(){
-    return name;
-  }
 
 }

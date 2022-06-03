@@ -16,15 +16,15 @@ public class Dough implements Station {
 
   public void loadScene() {}
 
-  public int getClickCount() {
-    return clickCount;
-  }
-
   public boolean done() {
     return done;
   }
 
   public String getName(){
     return name;
+  }
+
+  public int getClickCount() {
+    return clickCount;
   }
 }

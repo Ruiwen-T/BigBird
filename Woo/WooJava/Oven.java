@@ -17,10 +17,6 @@ public class Oven implements Station {
 
   public void loadScene() {}
 
-  public int getTime() {
-    return time;
-  }
-
   public boolean done() {
     return done;
   }
@@ -28,4 +24,9 @@ public class Oven implements Station {
   public String getName(){
     return name;
   }
+  
+  public int getTime() {
+    return time;
+  }
+
 }

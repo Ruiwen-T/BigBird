@@ -34,7 +34,4 @@ public class LLQueue<QUASAR> implements Queue<QUASAR>{
   public QUASAR peekFront(){
     return baahah.getFirst();
   }
-  public static void main(String[] args) {
-
-  }
 }

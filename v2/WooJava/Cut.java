@@ -16,10 +16,6 @@ public class Cut implements Station {
 
   public void loadScene() {}
 
-  public int getCuts(){
-    return cuts;
-  }
-
   public boolean done() {
     return done;
   }
@@ -28,4 +24,7 @@ public class Cut implements Station {
     return name;
   }
 
+  public int getCuts(){
+    return cuts;
+  }
 }

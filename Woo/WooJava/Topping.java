@@ -16,6 +16,7 @@ public class Topping {
   public int getClickEvenness() {
     return 0;
   }
+  
   public int[] getClickCount() {
     return new int[1];
   }
