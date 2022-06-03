@@ -5,10 +5,12 @@
 
 void setup() {
   size(750,750);
-  background(90);
+  //background(90);
+  Instructions instructions = new Instructions();
+  //Game game = new Game();
+  //game.play();
 }
 
 void draw() {
-  Game game = new Game();
-  game.play();
+  
 }

@@ -55,6 +55,7 @@ tales of wisdom gained...
 * Queue is an interface and therefore abstract. If you want to use a Queue, you need to use one of its implementations (something that implements the Queue interface), or else you won't be able to construct it nor use enqueue/dequeue/etc methods
 * Because Processing converts code into Java code, all code inside a .pde file will become code inside a class with the same name as the file. This means any class we declare inside .pde must not have the same name as the file. 
 * There can only be one setup() in the whole project (can be clarified)
+* setup() is only run once, so listening for keyboard/mouse inputs is not possible here. That can only be done inside draw(), which checks more than once.
 ||||||||||||||||||||||||||||||||||||||||||
 
 

@@ -25,11 +25,8 @@ class Game {
     toppings[6] = new Topping("mushroom");
     toppings[7] = new Topping("olive");
   
-    //generating 6 random orders for the game
+    //initializing llqueue of orders
     orders = new LLQueue<Pizza>();
-    //for (int i = 0; i < 6; i++) {
-    //  orders.enqueue(genPizza());
-    //}
   
     //initializing empty queue of pizzas
     pizzas = new LLQueue<Pizza>();
@@ -42,20 +39,12 @@ class Game {
     stations.add(new Oven("oven"));
     stations.add(new Cut("cut"));
     stations.add(new Serve("serve"));
-  
-    //for (int i = 0; i < 6; i++) {
-    //  Iterator it = stations.iterator();
-    //  while (it.hasNext()) {
-    //    Station next = (Station)it.next();
-    //    background(0);
-    //    next.loadScene();
-    //    next.showOrder(orders);
-  
-    //  }
-    //}
   }
   
+  
+  
   void play() {
+    background(255);
     for (int i = 0; i < 6; i++) {
       orders.enqueue(genPizza());
     }

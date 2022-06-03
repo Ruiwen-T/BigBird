@@ -14,8 +14,8 @@ class Cashier implements Station {
   }
 
   public void loadScene() {
-    //size(750, 750);
-    //background(0);
+    size(750, 750);
+    background(255);
   }
 
   public boolean done() {
