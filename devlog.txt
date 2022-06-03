@@ -54,6 +54,7 @@ tales of wisdom gained...
 * UML diagram before coding is very helpful!! (flesh out this point later)
 * Queue is an interface and therefore abstract. If you want to use a Queue, you need to use one of its implementations (something that implements the Queue interface), or else you won't be able to construct it nor use enqueue/dequeue/etc methods
 * Because Processing converts code into Java code, all code inside a .pde file will become code inside a class with the same name as the file. This means any class we declare inside .pde must not have the same name as the file. 
+* There can only be one setup() in the whole project (can be clarified)
 ||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -111,4 +112,5 @@ All :: Updated UML diagrams with new methods and instance variables
 All :: Updated Woo constructor with beginning of gameplay and created LL of stations
 All :: Began work on v2, now with use of Iterator
 Jun Hong :: Began working in Processing again, beginning with graphics
+Jun Hong :: Made Woo a driver file, with only setup() and draw(), moved actual code to Game
 ==============================================================
