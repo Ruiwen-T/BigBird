@@ -35,11 +35,13 @@ UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
+* Problem with displaying toppings in toString method of Pizza.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
 * Processing actually converts all code into Java code first, which can then run.
+* Our decision to make a boolean to make sure we couldn't run the keyPressed method more than once is useful for making sure that only one game could be run at a time.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -114,4 +116,18 @@ All :: Updated Woo constructor with beginning of gameplay and created LL of stat
 All :: Began work on v2, now with use of Iterator
 Jun Hong :: Began working in Processing again, beginning with graphics
 Jun Hong :: Made Woo a driver file, with only setup() and draw(), moved actual code to Game
+==============================================================
+
+2022-06-03
+--------------------------------------------------------------
+All :: Made instructions class, started putting background color and text into processing
+All :: Attempted to fix game play method
+==============================================================
+
+2022-06-05
+--------------------------------------------------------------
+All :: Made presentable instructions page
+All :: Made key input to change from instruction to first scene of game, implemented loadScene method of Cashier.
+All :: Encountered problem with displaying toppings in toString method of Pizza.
+All :: Attempted to troubleshoot problem
 ==============================================================

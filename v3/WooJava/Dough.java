@@ -1,5 +1,4 @@
 import java.util.Queue;
-
 public class Dough implements Station {
   private boolean done;
   private int clickCount;
@@ -15,10 +14,7 @@ public class Dough implements Station {
 
   }
 
-  public void loadScene() {
-    //size(750, 750);
-    //background(20);
-  }
+  public void loadScene() {}
 
   public boolean done() {
     return done;
