@@ -15,18 +15,23 @@ class Game {
   //default constructor
   public Game() {
     //initializing array of toppings for future use
-    toppings = new Topping[8];
-    toppings[0] = new Topping("tomato");
-    toppings[1] = new Topping("cheese");
-    toppings[2] = new Topping("pepperoni");
-    toppings[3] = new Topping("sausage");
-    toppings[4] = new Topping("bacon");
-    toppings[5] = new Topping("pineapple");
-    toppings[6] = new Topping("mushroom");
-    toppings[7] = new Topping("olive");
+    toppings = new Topping[6];
+    //toppings[0] = new Topping("tomato");
+    //toppings[1] = new Topping("cheese");
+    toppings[0] = new Topping("pepperoni");
+    toppings[1] = new Topping("sausage");
+    toppings[2] = new Topping("bacon");
+    toppings[3] = new Topping("pineapple");
+    toppings[4] = new Topping("mushroom");
+    toppings[5] = new Topping("olive");
   
     //initializing llqueue of orders
     orders = new LLQueue<Pizza>();
+    
+    for (int i = 0; i < 6; i++) {
+      
+      orders.enqueue((Pizza)genPizza());
+    }
   
     //initializing empty queue of pizzas
     pizzas = new LLQueue<Pizza>();
@@ -44,9 +49,6 @@ class Game {
   
   
   void play() {
-    for (int i = 0; i < 6; i++) {
-      orders.enqueue(genPizza());
-    }
     
     for (int i = 0; i < 6; i++) {
       Iterator it = stations.iterator();
@@ -74,12 +76,15 @@ class Game {
     int o = (int)(1 + (Math.random() * 3));
     int c = (int)(Math.random() * 5);
     Stack<Topping> tops = new Stack();
-    for (int i = 7; i > -1; i--) {
+    for (int i = 5; i > -1; i--) {
       if (Math.random() > 0.5) {
         tops.push(toppings[i]);
       }
     }
-    return new Pizza(tops, o, c);
+    tops.push(new Topping("cheese"));
+    tops.push(new Topping("tomato"));
+    Pizza p = new Pizza(tops, o, c);
+    return p;
   }
   
 }

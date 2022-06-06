@@ -1,4 +1,5 @@
 import java.util.Queue;
+import java.util.Stack;
 
 class Cashier implements Station {
   private boolean done;
@@ -9,20 +10,24 @@ class Cashier implements Station {
     done = false;
   }
 
-  public void showOrder(LLQueue q) {
-    Pizza p = (Pizza)q.peekFront();
+  public void showOrder(LLQueue<Pizza> q) {
+    Game g = new Game();
+    text(g.genPizza().toString(), 300, 300);
+    Pizza p = q.peekFront();
+    System.out.println(p);
     fill(255);
     rect(10, 10, 200, 200);
     fill(50);
     textAlign(LEFT);
     text("Current order is:", 20, 30);
-    text(p.toString(), 20, 50);
+    String t = q.peekFront().toString();
+    text(t, 20, 50);
     fill(255);
     
   }
 
   public void loadScene() {
-    background(0);
+    background(129);
     textAlign(CENTER);
     text("Cashier", 480, 30);
   }
