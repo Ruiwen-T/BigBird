@@ -131,3 +131,8 @@ All :: Made key input to change from instruction to first scene of game, impleme
 All :: Encountered problem with displaying toppings in toString method of Pizza.
 All :: Attempted to troubleshoot problem
 ==============================================================
+
+2022-06-06
+--------------------------------------------------------------
+All :: Attempted to fix showOrder problem, reworked toString method and constructor for Pizza, processing text
+==============================================================
