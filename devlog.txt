@@ -59,6 +59,8 @@ tales of wisdom gained...
 * There can only be one setup() in the whole project (can be clarified)
 * setup() is only run once, so listening for keyboard/mouse inputs is not possible here. That can only be done inside draw(), which checks more than once.
 * remember that if we set an object to another object, it's only an alias to it unless we copy it fully or the variable is a primitive
+* posting to Piazza earlier can save us a lot of time, and can help us understand the problem better since we have to explain the issue to someone
+* similar idea: use ducks
 ||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -137,4 +139,9 @@ All :: Attempted to troubleshoot problem
 --------------------------------------------------------------
 All :: Attempted to fix showOrder problem, reworked toString method and constructor for Pizza, processing text
 All :: Fixed showOrder problem, realized it was a problem with how Java handled aliases for objects, cleaned up Pizza toString method
+==============================================================
+
+2022-06-07
+--------------------------------------------------------------
+All :: Attempted to implement progression between stations, added Button class, used in all stations (but Cashier only for now)
 ==============================================================
