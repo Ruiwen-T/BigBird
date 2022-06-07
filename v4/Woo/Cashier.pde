@@ -11,8 +11,6 @@ class Cashier implements Station {
   }
 
   public void showOrder(LLQueue<Pizza> q) {
-    Game g = new Game();
-    text(g.genPizza().toString(), 300, 300);
     Pizza p = q.peekFront();
     System.out.println(p);
     fill(255);
@@ -20,10 +18,7 @@ class Cashier implements Station {
     fill(50);
     textAlign(LEFT);
     text("Current order is:", 20, 30);
-    String t = q.peekFront().toString();
-    text(t, 20, 50);
-    fill(255);
-    
+    text(p.toString(), 20, 50);
   }
 
   public void loadScene() {

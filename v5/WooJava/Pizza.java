@@ -34,20 +34,11 @@ public class Pizza {
   }
 
   public String toString() {
-    Stack<Topping> temp = new Stack();//new Stack();
     String output = "toppings: ";
-    while(!toppings.isEmpty()) {
-      temp.push(toppings.pop());
+    while (!toppings.isEmpty()) {
+      output += toppings.pop().getName() + ", ";
     }
-    while (!temp.isEmpty()) {
-      Topping storage = temp.pop();
-      output += (storage.getName() + ",\n");
-      toppings.push(storage);
-    }
-    
-    output = output.substring(0, output.length() - 2);
-    
-    output += "\nOven time: " + oven + "\nCuts: " + cuts;
+    output += "\n" + oven + "\n" + cuts;
     return output;
   }
 }

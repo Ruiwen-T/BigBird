@@ -42,7 +42,7 @@ COOL STUFF LEARNED
 wow! oo!...
 * Processing actually converts all code into Java code first, which can then run.
 * Our decision to make a boolean to make sure we couldn't run the keyPressed method more than once is useful for making sure that only one game could be run at a time.
-
+* Understanding what an alias is and how it works was a big lesson, since we were stuck on it for far too long, but after we realized what was happening, we realized why so much emphasis gets placed on this. 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
@@ -58,6 +58,7 @@ tales of wisdom gained...
 * Because Processing converts code into Java code, all code inside a .pde file will become code inside a class with the same name as the file. This means any class we declare inside .pde must not have the same name as the file. 
 * There can only be one setup() in the whole project (can be clarified)
 * setup() is only run once, so listening for keyboard/mouse inputs is not possible here. That can only be done inside draw(), which checks more than once.
+* remember that if we set an object to another object, it's only an alias to it unless we copy it fully or the variable is a primitive
 ||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -135,4 +136,5 @@ All :: Attempted to troubleshoot problem
 2022-06-06
 --------------------------------------------------------------
 All :: Attempted to fix showOrder problem, reworked toString method and constructor for Pizza, processing text
+All :: Fixed showOrder problem, realized it was a problem with how Java handled aliases for objects, cleaned up Pizza toString method
 ==============================================================

@@ -29,7 +29,6 @@ class Game {
     orders = new LLQueue<Pizza>();
     
     for (int i = 0; i < 6; i++) {
-      
       orders.enqueue((Pizza)genPizza());
     }
   
@@ -49,7 +48,6 @@ class Game {
   
   
   void play() {
-    
     for (int i = 0; i < 6; i++) {
       Iterator it = stations.iterator();
       while (it.hasNext()) {
@@ -76,13 +74,15 @@ class Game {
     int o = (int)(1 + (Math.random() * 3));
     int c = (int)(Math.random() * 5);
     Stack<Topping> tops = new Stack();
-    for (int i = 5; i > -1; i--) {
+    tops.push(new Topping("tomato"));
+    tops.push(new Topping("cheese"));
+   
+    for (int i = 0; i < 6; i++) {
       if (Math.random() > 0.5) {
         tops.push(toppings[i]);
       }
     }
-    tops.push(new Topping("cheese"));
-    tops.push(new Topping("tomato"));
+    
     Pizza p = new Pizza(tops, o, c);
     return p;
   }

@@ -12,9 +12,6 @@ void setup() {
   size(960,720);
   background(255);
   Instructions instructions = new Instructions();
-  
-  Game g = new Game();
-  System.out.println(g.genPizza());
 }
 
 void draw() {
