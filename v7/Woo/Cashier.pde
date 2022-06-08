@@ -12,23 +12,24 @@ class Cashier implements Station {
 
   public void showOrder(LLQueue<Pizza> q) {
     Pizza p = q.peekFront();
-    System.out.println(p);
+    //System.out.println(p);
     fill(255);
-    rect(10, 10, 200, 200);
+    rect(375, 200, 200, 250);
     fill(50);
     textAlign(LEFT);
-    text("Current order is:", 20, 30);
-    text(p.toString(), 20, 50);
+    text("Current order is:", 385, 220);
+    text(p.toString(), 385, 240);
   }
 
   public void loadScene() {
     background(129);
     textAlign(CENTER);
+    fill(50);
     text("Cashier", 480, 30);
-    text("Ready to make the current order?", 480, 350);
-    rect(415,385,130,130);
+    text("Ready to make the current order?", 480, 500);
+    rect(415,525,130,50);
     fill(0,200,0);
-    text("Press ENTER",480,450);
+    text("Press ENTER",480,555);
   }
 
   public boolean done() {
@@ -41,5 +42,11 @@ class Cashier implements Station {
   
   public void setDone(boolean b){
     done = b;
+  }
+  
+  public void play() {
+    while(!done) {
+      
+    }
   }
 }

@@ -17,6 +17,7 @@ double[] scores;
 Topping[] toppings;
 boolean gameStarted;
 Iterator<Station> it;
+int doughClicks;
 
 void setup() {
   gameStarted = false;
@@ -48,39 +49,14 @@ void setup() {
     stations.add(new Cut("cut"));
     stations.add(new Serve("serve"));
     
+    doughClicks = 0;
+    
     size(960,720);
     background(255);
     Instructions instructions = new Instructions();
 }
 
 void draw() {
-}
-
-void keyPressed() {
-  if (!gameStarted) {
-    gameStarted = true;
-    it = stations.iterator();
-    if(it.hasNext()){
-      Station next = it.next();
-      next.loadScene();
-      next.showOrder(orders);
-    }
-  }
-  else if(!orders.isEmpty()){
-    if(key == ENTER){
-      if(it.hasNext()){
-        Station next = it.next();
-        next.loadScene();
-        next.showOrder(orders);
-      }
-      else{
-        Pizza anskey = orders.dequeue();
-      }
-    }
-  }
-  else{
-    //SCORE STUFF
-  }
 }
 
 Pizza genPizza() {
@@ -98,4 +74,38 @@ Pizza genPizza() {
     
     Pizza p = new Pizza(tops, o, c);
     return p;
+}
+
+void keyPressed() {
+  if (!gameStarted) {
+    gameStarted = true;
+    it = stations.iterator();
+    currStation = -1;
+    if(it.hasNext()){
+      Station next = it.next();
+      currStation++;
+      next.loadScene();
+      next.showOrder(orders);
+      //next.play();
+      println(currStation);
+    }
+  }
+  else if(!orders.isEmpty()){
+    if(key == ENTER){
+      if(it.hasNext()){
+        Station next = it.next();
+        next.loadScene();
+        next.showOrder(orders);
+        //next.play();
+      }
+    } else if (key == 'd') {
+        
+    }
+    else {
+      Pizza anskey = orders.dequeue();
+    }
+  }
+  else{
+    //SCORE STUFF
+  }
 }

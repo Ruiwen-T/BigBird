@@ -21,7 +21,7 @@ public class ToppingS implements Station {
     Pizza p = q.peekFront();
     System.out.println(p);
     fill(255);
-    rect(10, 10, 200, 200);
+    rect(10, 10, 200, 250);
     fill(50);
     textAlign(LEFT);
     text("Current order is:", 20, 30);
@@ -32,10 +32,10 @@ public class ToppingS implements Station {
     background(129);
     textAlign(CENTER);
     text("Toppings", 480, 30);
-    text("Done adding the toppings?", 480, 350);
-    rect(415,385,130,130);
+    text("Done adding the toppings?", 480, 500);
+    rect(415,525,130,50);
     fill(0,200,0);
-    text("Press ENTER",480,450);
+    text("Press ENTER",480,555);
   }
 
   public boolean done() {
@@ -55,11 +55,7 @@ public class ToppingS implements Station {
   }
 
   public void play() {
-    Button progress = new Button(300,300,50,50,0);
-    progress.display();
-    if (progress.isInButton()) {
-      done = true;
-    }
+    
   }
   
   public void setDone(boolean b){

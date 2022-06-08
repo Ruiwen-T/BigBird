@@ -4,6 +4,7 @@ class Instructions {
   Instructions() {
     size(960,720);
     background(210, 190, 120); //temporary color
+    fill(60);
     textAlign(CENTER);
     font = loadFont("BungeeInline-Regular-48.vlw");
     textFont(font, 20);

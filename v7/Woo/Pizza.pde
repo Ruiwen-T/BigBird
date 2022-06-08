@@ -6,12 +6,14 @@ public class Pizza {
   private Stack<Topping> toppings;
   private int oven; //can be 1, 2, or 3, how long pizza should be in oven
   private int cuts; //how many cuts, can be max 16 slices (4 cuts), 0-4
+  private int kneadClicks;
 
   //default constructor
   public Pizza() {
-    toppings = new Stack();
+    toppings = new Stack<Topping>();
     oven = 0;
     cuts = 0;
+    kneadClicks = 0;
   }
 
   //overloaded constructor
@@ -19,6 +21,7 @@ public class Pizza {
     toppings = tp;
     oven = o;
     cuts = c;
+    kneadClicks = 0;
   }
 
   public Stack getToppings() {
@@ -32,10 +35,18 @@ public class Pizza {
   public int getCuts() {
     return cuts;
   }
+  
+  public int getKneadClicks() {
+    return kneadClicks;
+  }
+  
+  public void incrementK() {
+    kneadClicks++;
+  }
 
   public String toString() {
     Stack<Topping> temp = new Stack();//new Stack();
-    String output = "toppings: ";
+    String output = "toppings: \n";
     while(!toppings.isEmpty()) {
       temp.push(toppings.pop());
     }
@@ -47,7 +58,7 @@ public class Pizza {
     
     output = output.substring(0, output.length() - 2);
     
-    output += "\nOven time: " + oven + "\nCuts: " + cuts;
+    output += "\n\nOven time: \n" + oven + "\n\nCuts: \n" + cuts;
     return output;
   }
 }
