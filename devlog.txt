@@ -30,12 +30,13 @@ Flesh out each category whenever necessary, appropriate.
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow we so BOSS bc...
+* We resolved our problem with empty stacks. We realized we'd been using an alias for an instance variable that we wanted to keep intact, when we should have been using a deep copy of that stack.
+* We figured out how to move between scenes in Processing. We struggled a lot with waiting for mouse input, so we pivoted our idea to use keyboard input instead, which we had been able to successfully implement for the instructions page. We were using too many classes and loops, which was confusing us and overcomplicating things. We worked through the problem a lot faster than previous issues because we commented out lines and ran after nearly every change. This improved workflow was the more important takeway (as opposed to the technical success).
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
-* Problem with displaying toppings in toString method of Pizza.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,12 +44,16 @@ wow! oo!...
 * Processing actually converts all code into Java code first, which can then run.
 * Our decision to make a boolean to make sure we couldn't run the keyPressed method more than once is useful for making sure that only one game could be run at a time.
 * Understanding what an alias is and how it works was a big lesson, since we were stuck on it for far too long, but after we realized what was happening, we realized why so much emphasis gets placed on this. 
+
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
 * iterator added
 * realization of usage of linkedlist
 * started with Processing, but thought it would be easier to get down the underlying aspects of the game before graphics so moved to Java
+* NO MORE LOOPS, while loops are tricky in Processing because methods like keyPressed() and draw() are being constantly run. While loops are particularly tricky for user input (for example, waiting for the user to click in a certain area).
+* Changed mouse input to key input to transition between scenes because we were more successful initially with key input and ran into less problems. There are also very specificly defined different keys, so each one can be assigned a different function or purpose, and we only need an if/else-if block within keyPressed() to redirect between all the keys. 
+
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -61,6 +66,10 @@ tales of wisdom gained...
 * remember that if we set an object to another object, it's only an alias to it unless we copy it fully or the variable is a primitive
 * posting to Piazza earlier can save us a lot of time, and can help us understand the problem better since we have to explain the issue to someone
 * similar idea: use ducks
+* It's more difficult to troubleshoot in Processing than Java, just because we have less experience with Processing and don't know as much of the basic framework everything relies on.
+* Error messages in Processing are also a bit more vague and less helpful than the ones we receive from Java.
+* It's a lot more valuable to try to do something on your own after viewing a strong model. We found Ruff Commandos' button framework to be extremely helpful. However, we first tried to directly copy their file into our project and use it. Even though we read through their code and clear comments and thought we understood everything, we didn't have the best comprehension that we could have had. We eventually deleted their file from our project and used the concepts behind their framework to implement our own buttons, and doing so allowed us to better troubleshoot and understand any problems. 
+* Commenting out a tricky block of code and trying to reapproach it from a different angle, running every time a change is made, is perhaps the most efficient way to target a problem. Running immediately and frequently allows the issue to be pinpointed a lot faster. 
 ||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -144,4 +153,5 @@ All :: Fixed showOrder problem, realized it was a problem with how Java handled 
 2022-06-07
 --------------------------------------------------------------
 All :: Attempted to implement progression between stations, added Button class, used in all stations (but Cashier only for now)
+All :: FINALLY fixed progression between stations, all stations now sequentially appear and transition based on keyboard input, implemented loadScene() and showOrder() for all classes that implement the Station interface, removed clutter and unnecessary clasess
 ==============================================================

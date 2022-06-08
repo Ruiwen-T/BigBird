@@ -46,15 +46,27 @@ class Game {
   
   
   void play() {
-    for (int i = 0; i < 6; i++) {
-      Iterator it = stations.iterator();
+      for (int i = 0; i < 6; i++) {
+        Iterator<Station> it = stations.iterator();
+        boolean cl = true;
+        while(cl == true && it.hasNext()){
+          cl = false;
+          Station next = it.next();
+          next.loadScene();
+          next.showOrder(orders);
+          while(cl == false){
+            if(mousePressed == true && (mouseX > 430 && mouseX < 530) && (mouseY > 400 && mouseY < 500)){
+              cl = true;
+            }
+          }
+        }
+      /**
       boolean currDone = false;
+      Station next;
       if (it.hasNext()) {
-        Station next = (Station)it.next();
+        next = (Station)it.next();
       }
       while (it.hasNext() && next.done() == false) {
-        
-        
         //while (!currDone) {
           next.loadScene();
           next.showOrder(orders);
@@ -64,9 +76,9 @@ class Game {
             currDone = true;
           }
         //}
-        Station next = (Station)it.next();
+        next = (Station)it.next();
       }
-      
+      **/
     }
   }
   

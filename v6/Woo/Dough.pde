@@ -26,6 +26,10 @@ public class Dough implements Station {
     background(129);
     textAlign(CENTER);
     text("Dough", 480, 30);
+    text("Done kneading the dough?", 480, 350);
+    rect(415,385,130,130);
+    fill(0,200,0);
+    text("Press ENTER",480,450);
   }
 
   public boolean done() {
@@ -41,10 +45,16 @@ public class Dough implements Station {
   }
   
   public void play() {
+    /**
     Button progress = new Button(300,300,50,50,0);
     progress.display();
     if (progress.isInButton()) {
       done = true;
     }
+    **/
+  }
+  
+  public void setDone(boolean b){
+    done = b;
   }
 }

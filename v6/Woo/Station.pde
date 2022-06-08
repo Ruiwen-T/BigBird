@@ -9,7 +9,7 @@ interface Station {
 
   boolean done();
   
-  void setDone();
+  void setDone(boolean b);
 
   String getName();
   
