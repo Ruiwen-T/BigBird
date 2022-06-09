@@ -12,7 +12,6 @@ class Cashier implements Station {
 
   public void showOrder(LLQueue<Pizza> q) {
     Pizza p = q.peekFront();
-    //System.out.println(p);
     fill(255);
     rect(375, 200, 200, 250);
     fill(50);
@@ -45,8 +44,6 @@ class Cashier implements Station {
   }
   
   public void play() {
-    while(!done) {
-      
-    }
+    
   }
 }

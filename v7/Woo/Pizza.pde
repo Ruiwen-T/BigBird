@@ -43,6 +43,10 @@ public class Pizza {
   public void incrementK() {
     kneadClicks++;
   }
+  
+  public int getK() {
+    return kneadClicks;
+  }
 
   public String toString() {
     Stack<Topping> temp = new Stack();//new Stack();

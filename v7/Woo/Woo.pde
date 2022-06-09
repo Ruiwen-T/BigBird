@@ -18,6 +18,7 @@ Topping[] toppings;
 boolean gameStarted;
 Iterator<Station> it;
 int doughClicks;
+Pizza userAttempt;
 
 void setup() {
   gameStarted = false;
@@ -57,6 +58,7 @@ void setup() {
 }
 
 void draw() {
+  
 }
 
 Pizza genPizza() {
@@ -81,6 +83,7 @@ void keyPressed() {
     gameStarted = true;
     it = stations.iterator();
     currStation = -1;
+    userAttempt = new Pizza();
     if(it.hasNext()){
       Station next = it.next();
       currStation++;
@@ -90,22 +93,30 @@ void keyPressed() {
       println(currStation);
     }
   }
-  else if(!orders.isEmpty()){
+  else if(gameStarted && !orders.isEmpty()){
     if(key == ENTER){
       if(it.hasNext()){
         Station next = it.next();
+        currStation++;
         next.loadScene();
         next.showOrder(orders);
         //next.play();
-      }
-    } else if (key == 'd') {
         
+      }
+    } else if (key == 'd' && currStation == 1) {
+      userAttempt.incrementK();
+      println(userAttempt.getK());
+      if (userAttempt.getK() >= 20) {
+        currStation++;
+      }
     }
     else {
       Pizza anskey = orders.dequeue();
+      currStation = 0;
     }
+    println(currStation);
   }
-  else{
+  else if (orders.isEmpty()) {
     //SCORE STUFF
   }
 }

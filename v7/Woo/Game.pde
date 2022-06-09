@@ -43,8 +43,6 @@ class Game {
     stations.add(new Serve("serve"));
   }
   
-  
-  
   void play() {
       for (int i = 0; i < 6; i++) {
         Iterator<Station> it = stations.iterator();

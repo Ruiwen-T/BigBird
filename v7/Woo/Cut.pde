@@ -12,7 +12,6 @@ public class Cut implements Station {
   }
   public void showOrder(LLQueue<Pizza> q) {
     Pizza p = q.peekFront();
-    System.out.println(p);
     fill(255);
     rect(10, 10, 200, 250);
     fill(50);

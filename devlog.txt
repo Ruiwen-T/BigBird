@@ -155,3 +155,10 @@ All :: Fixed showOrder problem, realized it was a problem with how Java handled 
 All :: Attempted to implement progression between stations, added Button class, used in all stations (but Cashier only for now)
 All :: FINALLY fixed progression between stations, all stations now sequentially appear and transition based on keyboard input, implemented loadScene() and showOrder() for all classes that implement the Station interface, removed clutter and unnecessary clasess
 ==============================================================
+
+2022-06-08
+--------------------------------------------------------------
+All :: Attempted to implement Dough class, decided to use key inputs instead of mouse input because we were more familiar with it
+Jun Hong :: Continued to implement Dough class, got kneading to work as a value.
+Jun Hong :: Encountered bug where station progression would get stuck if too many (or a specific input?) were inputted at the beginning
+==============================================================
