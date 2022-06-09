@@ -31,6 +31,11 @@ public class Pizza {
   public int getOven() {
     return oven;
   }
+  
+  //could also be an increment oven time instead of set oven
+  public void setOven(int time) {
+    oven = time;
+  }
 
   public int getCuts() {
     return cuts;
@@ -46,6 +51,10 @@ public class Pizza {
   
   public int getK() {
     return kneadClicks;
+  }
+  
+  public void addTopping(Topping t) {
+    toppings.push(t);
   }
 
   public String toString() {
@@ -65,4 +74,14 @@ public class Pizza {
     output += "\n\nOven time: \n" + oven + "\n\nCuts: \n" + cuts;
     return output;
   }
+  
+  /*
+  comparisons of oven, cuts, knead clicks will be comparing ints
+  comparisons of toppings will require dequeueing then comparing?
+  */
+  /*
+  public int compareTo(Pizza other) {
+    
+  }
+  */
 }

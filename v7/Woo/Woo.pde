@@ -19,6 +19,7 @@ boolean gameStarted;
 Iterator<Station> it;
 int doughClicks;
 Pizza userAttempt;
+Station next;
 
 void setup() {
   gameStarted = false;
@@ -78,6 +79,12 @@ Pizza genPizza() {
     return p;
 }
 
+//key inputs used: 
+//any key to start the game
+//enter to progress to next station
+//d to knead dough
+//q, w, e, r, t, y, u, i for the 8 toppings?
+//1, 2, 3 for oven time?
 void keyPressed() {
   if (!gameStarted) {
     gameStarted = true;
@@ -85,7 +92,7 @@ void keyPressed() {
     currStation = -1;
     userAttempt = new Pizza();
     if(it.hasNext()){
-      Station next = it.next();
+      next = it.next();
       currStation++;
       next.loadScene();
       next.showOrder(orders);
@@ -96,7 +103,7 @@ void keyPressed() {
   else if(gameStarted && !orders.isEmpty()){
     if(key == ENTER){
       if(it.hasNext()){
-        Station next = it.next();
+        next = it.next();
         currStation++;
         next.loadScene();
         next.showOrder(orders);
@@ -107,11 +114,75 @@ void keyPressed() {
       userAttempt.incrementK();
       println(userAttempt.getK());
       if (userAttempt.getK() >= 20) {
+        next = it.next();
         currStation++;
+        next.loadScene();
+        next.showOrder(orders);
       }
-    }
-    else {
+    } else if (currStation == 2) {
+      char letter = key;
+      switch (letter) {
+        case 'q':
+          Topping tomato = new Topping("tomato");
+          userAttempt.addTopping(tomato);
+          println("tomato");
+          break;
+        case 'w':
+          Topping cheese = new Topping("cheese");
+          userAttempt.addTopping(cheese);
+          println("cheese");
+          break;
+        case 'e':
+          Topping pepperoni = new Topping("pepperoni");
+          userAttempt.addTopping(pepperoni);
+          println("pepperoni");
+          break;
+        case 'r':
+          Topping sausage = new Topping("sausage");
+          userAttempt.addTopping(sausage);
+          println("sausage");
+          break;
+        case 't':
+          Topping bacon = new Topping("bacon");
+          userAttempt.addTopping(bacon);
+          println("bacon");
+          break;
+        case 'y':
+          Topping pineapple = new Topping("pineapple");
+          userAttempt.addTopping(pineapple);
+          println("pineapple");
+          break;
+        case 'u':
+          Topping mushroom = new Topping("mushroom");
+          userAttempt.addTopping(mushroom);
+          println("mushroom");
+          break;
+        case 'i':
+          Topping olive = new Topping("olive");
+          userAttempt.addTopping(olive);
+          println("olive");
+          break;
+      }
+    } else if (currStation == 3) {
+      if (key == '1') {
+        userAttempt.setOven(1);
+        println("bake" + 1);
+      } else if (key == '2') {
+        userAttempt.setOven(2);
+        println("bake" + 2);
+      }
+      else if (key == '3') {
+        userAttempt.setOven(3);
+        println("bake" + 3);
+      }
+    } else if (currStation == 4) {
+      
+    } else if (currStation == 5) {
       Pizza anskey = orders.dequeue();
+      //then compare user's attempt with anskey
+      //could probably make a compare method to compare with another pizza in pizza class, see how accurate and return an int from 0-10?
+      
+      //print for testing
       currStation = 0;
     }
     println(currStation);

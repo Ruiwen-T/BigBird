@@ -23,12 +23,17 @@ public class Dough implements Station {
 
   public void loadScene() {
     background(129);
+    fill(255);
+    rect(10, 270, 200, 70);
+    fill(50);
+    text("Instructions:\nPress D 20 times\nto knead the\ndough.", 20, 290);
     textAlign(CENTER);
     text("Dough", 480, 30);
     text("Done kneading the dough?", 480, 500);
     rect(415,525,130,50);
     fill(0,200,0);
     text("Press ENTER",480,555);
+    
   }
 
   public boolean done() {

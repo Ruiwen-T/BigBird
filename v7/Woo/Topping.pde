@@ -1,4 +1,5 @@
 public class Topping {
+  //the way i coded it probably doesn't require clickcount or clickevenness (to simplify code and to streamline workflow)
   private int clickEvenness;
   private int[] clickCount;
   private String name;

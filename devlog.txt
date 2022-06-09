@@ -162,3 +162,9 @@ All :: Attempted to implement Dough class, decided to use key inputs instead of 
 Jun Hong :: Continued to implement Dough class, got kneading to work as a value.
 Jun Hong :: Encountered bug where station progression would get stuck if too many (or a specific input?) were inputted at the beginning
 ==============================================================
+
+2022-06-09
+--------------------------------------------------------------
+Jun Hong :: Added user input for Topping and Oven Stations
+Jun Hong :: Added comments for how to simplify code and improve workflow (to make it in time for demotime)
+==============================================================
