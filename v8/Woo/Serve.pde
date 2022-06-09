@@ -22,7 +22,12 @@ public class Serve implements Station {
   public void loadScene() {
     background(129);
     textAlign(CENTER);
+    fill(50);
     text("Serve", 480, 30);
+    text("Ready to serve the current pizza?", 480, 500);
+    rect(415,525,130,50);
+    fill(0,200,0);
+    text("Press s\nthen ENTER",480,550);
   }
 
   public boolean done() {

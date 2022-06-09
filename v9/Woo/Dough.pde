@@ -1,12 +1,14 @@
 import java.util.Queue;
 
-public class Serve implements Station {
+public class Dough implements Station {
   private boolean done;
+  private int clickCount;
   private String name;
 
-  public Serve(String n) {
+  public Dough(String n){
     name = n;
     done = false;
+    clickCount = 0;
   }
 
   public void showOrder(LLQueue<Pizza> q) {
@@ -21,13 +23,17 @@ public class Serve implements Station {
 
   public void loadScene() {
     background(129);
-    textAlign(CENTER);
+    fill(255);
+    rect(10, 270, 200, 70);
     fill(50);
-    text("Serve", 480, 30);
-    text("Ready to serve the current pizza?", 480, 500);
+    text("Instructions:\nPress D 20 times\nto knead the\ndough.", 20, 290);
+    textAlign(CENTER);
+    text("Dough", 480, 30);
+    text("Done kneading the dough?", 480, 500);
     rect(415,525,130,50);
     fill(0,200,0);
-    text("Press s\nthen ENTER",480,550);
+    text("Press ENTER",480,555);
+    
   }
 
   public boolean done() {
@@ -37,13 +43,19 @@ public class Serve implements Station {
   public String getName(){
     return name;
   }
-  
-  public double checkPizza(LLQueue orders, LLQueue pizzas) {
-    return -1.0;
-  }
 
+  public int getClickCount() {
+    return clickCount;
+  }
+  
   public void play() {
-    
+    /**
+    Button progress = new Button(300,300,50,50,0);
+    progress.display();
+    if (progress.isInButton()) {
+      done = true;
+    }
+    **/
   }
   
   public void setDone(boolean b){

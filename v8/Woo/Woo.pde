@@ -13,13 +13,19 @@ LLQueue<Pizza> orders;
 LLQueue<Pizza> pizzas;
 LinkedList<Station> stations;
 int currStation;
-double[] scores;
+int[] scores;
 Topping[] toppings;
 boolean gameStarted;
 Iterator<Station> it;
 int doughClicks;
 Pizza userAttempt;
 Station next;
+int clicks;
+int prevX;
+int prevY;
+int currX;
+int currY;
+int pizzaNum;
 
 void setup() {
   gameStarted = false;
@@ -51,7 +57,15 @@ void setup() {
     stations.add(new Cut("cut"));
     stations.add(new Serve("serve"));
     
+    scores = new int[6];
     doughClicks = 0;
+    pizzaNum = -1;
+    
+    clicks = 0;
+    prevX = 0;
+    prevY = 0;
+    currX = 0;
+    currY = 0;
     
     size(960,720);
     background(255);
@@ -91,6 +105,7 @@ void keyPressed() {
     it = stations.iterator();
     currStation = -1;
     userAttempt = new Pizza();
+    pizzaNum++;
     if(it.hasNext()){
       next = it.next();
       currStation++;
@@ -107,12 +122,13 @@ void keyPressed() {
         currStation++;
         next.loadScene();
         next.showOrder(orders);
-        //next.play();
-        
       }
     } else if (key == 'd' && currStation == 1) {
+      //possibly show the pizza as a small ellipse, with each click gradually making the pizza bigger
+      //once correct, change color a little?
       userAttempt.incrementK();
       println(userAttempt.getK());
+      //maybe don't auto advance the game to make it harder?
       if (userAttempt.getK() >= 20) {
         next = it.next();
         currStation++;
@@ -122,42 +138,42 @@ void keyPressed() {
     } else if (currStation == 2) {
       char letter = key;
       switch (letter) {
-        case 'q':
+        case 'w':
           Topping tomato = new Topping("tomato");
           userAttempt.addTopping(tomato);
           println("tomato");
           break;
-        case 'w':
+        case 'e':
           Topping cheese = new Topping("cheese");
           userAttempt.addTopping(cheese);
           println("cheese");
           break;
-        case 'e':
+        case 'r':
           Topping pepperoni = new Topping("pepperoni");
           userAttempt.addTopping(pepperoni);
           println("pepperoni");
           break;
-        case 'r':
+        case 't':
           Topping sausage = new Topping("sausage");
           userAttempt.addTopping(sausage);
           println("sausage");
           break;
-        case 't':
+        case 'y':
           Topping bacon = new Topping("bacon");
           userAttempt.addTopping(bacon);
           println("bacon");
           break;
-        case 'y':
+        case 'u':
           Topping pineapple = new Topping("pineapple");
           userAttempt.addTopping(pineapple);
           println("pineapple");
           break;
-        case 'u':
+        case 'i':
           Topping mushroom = new Topping("mushroom");
           userAttempt.addTopping(mushroom);
           println("mushroom");
           break;
-        case 'i':
+        case 'o':
           Topping olive = new Topping("olive");
           userAttempt.addTopping(olive);
           println("olive");
@@ -175,19 +191,46 @@ void keyPressed() {
         userAttempt.setOven(3);
         println("bake" + 3);
       }
+      text(userAttempt.toString(), 300, 300);
     } else if (currStation == 4) {
       
     } else if (currStation == 5) {
-      Pizza anskey = orders.dequeue();
-      //then compare user's attempt with anskey
-      //could probably make a compare method to compare with another pizza in pizza class, see how accurate and return an int from 0-10?
-      
-      //print for testing
-      currStation = 0;
+      if (key == 's') {
+        Pizza anskey = orders.dequeue();
+        //then compare user's attempt with anskey
+        //could probably make a compare method to compare with another pizza in pizza class, see how accurate and return an int from 0-10?
+        scores[pizzaNum] = userAttempt.compareTo(anskey);
+        
+        println("your score:" + + scores[pizzaNum]);
+        
+        //print for testing
+        currStation = -1;
+        doughClicks = 0;
+        pizzaNum++;
+        it = stations.iterator();
+      }
     }
     println(currStation);
   }
   else if (orders.isEmpty()) {
     //SCORE STUFF
+    EndPage end = new EndPage();
+    end.display(scores);
+  }
+}
+
+void mousePressed() {
+  if (currStation == 4) {
+    clicks++;
+    if (clicks % 2 == 0) {
+      currX = mouseX;
+      currY = mouseY;
+      line(prevX, prevY, currX, currY);
+      //possibly use distance formula to see if two points of line are valid
+      userAttempt.incrementC();
+    } else {
+      prevX = mouseX;
+      prevY = mouseY;
+    }
   }
 }

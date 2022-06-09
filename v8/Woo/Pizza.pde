@@ -41,6 +41,10 @@ public class Pizza {
     return cuts;
   }
   
+  public void incrementC() {
+    cuts++;
+  }
+  
   public int getKneadClicks() {
     return kneadClicks;
   }
@@ -78,10 +82,36 @@ public class Pizza {
   /*
   comparisons of oven, cuts, knead clicks will be comparing ints
   comparisons of toppings will require dequeueing then comparing?
+  
+  oven will compare ints, cuts will compare ints
+  credit for every correct topping on pizza (that's supposed to be there)
+  if topping isn't on the pizza and not supposed to be there, give credit (8 pts for toppings)
+  check number of times a topping appears, keep track of it, if appears more than once, apply penalty
+  check order of toppings (1 pt)
+  pop off topping name into String, then use indexOf to check
   */
-  /*
+  
   public int compareTo(Pizza other) {
+    Stack<Topping> oToppings = other.getToppings();
+    int score = 0;
+    String thisTopping = "";
+    String otherTopping = "";
+    if (oven == other.getOven()) {
+      score++;
+    }
+    if (cuts == other.getCuts()) {
+      score++;
+    }
+    while (!toppings.isEmpty()) {
+      thisTopping += toppings.pop().getName();
+    }
+    while (!other.getToppings().isEmpty()) {
+      otherTopping += oToppings.pop().getName();
+    }
     
+    if (score < 0) {
+      score = 0;
+    }
+    return score;
   }
-  */
 }

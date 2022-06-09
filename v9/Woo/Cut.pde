@@ -1,14 +1,15 @@
 import java.util.Queue;
 
-public class Serve implements Station {
+public class Cut implements Station {
   private boolean done;
+  private int cuts;
   private String name;
 
-  public Serve(String n) {
+  public Cut(String n){
     name = n;
     done = false;
+    cuts = 0;
   }
-
   public void showOrder(LLQueue<Pizza> q) {
     Pizza p = q.peekFront();
     fill(255);
@@ -22,12 +23,11 @@ public class Serve implements Station {
   public void loadScene() {
     background(129);
     textAlign(CENTER);
-    fill(50);
-    text("Serve", 480, 30);
-    text("Ready to serve the current pizza?", 480, 500);
+    text("Cut", 480, 30);
+    text("Done cutting the pizza?", 480, 500);
     rect(415,525,130,50);
     fill(0,200,0);
-    text("Press s\nthen ENTER",480,550);
+    text("Press ENTER",480,555);
   }
 
   public boolean done() {
@@ -37,11 +37,11 @@ public class Serve implements Station {
   public String getName(){
     return name;
   }
-  
-  public double checkPizza(LLQueue orders, LLQueue pizzas) {
-    return -1.0;
-  }
 
+  public int getCuts(){
+    return cuts;
+  }
+  
   public void play() {
     
   }

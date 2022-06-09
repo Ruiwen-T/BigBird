@@ -30,11 +30,11 @@ public class ToppingS implements Station {
   public void loadScene() {
     background(129);
     fill(255);
-    rect(10, 270, 200, 235);
+    rect(10, 270, 200, 270);
     fill(50);
     text("Instructions:\nAdd the toppings\nrequested by the\ncustomer.", 20, 290);
-    text("Make sure to only\nadd the requested\ntoppings once.", 20, 350);
-    text("Tomato sauce: q\nCheese: w\nPepperoni: e\nSausage: r\nBacon: t\nPineappple: y\nMushroom: u\nOlive: i", 20, 400);
+    text("Make sure to only\nadd the requested\ntoppings once, and\nin the correct\norder\n(top to bottom).", 20, 350);
+    text("Tomato sauce: w\nCheese: e\nPepperoni: r\nSausage: t\nBacon: y\nPineappple: u\nMushroom: i\nOlive: o", 20, 440);
     textAlign(CENTER);
     text("Toppings", 480, 30);
     text("Done adding the toppings?", 480, 500);
