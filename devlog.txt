@@ -30,12 +30,14 @@ wow! oo!...
 * We learned a lot about shapes in Processing, especially because we worked with making pizza graphics. We played around with ellipses, arcs, triangles, and rectangles, and their parameters. We were able to create random orientations of shapes by multiplying dimensions and angles by random ranges.
 * We were able to create random distributions of topping shapes by adding a chance condition. For example, we'd only draw the pepperoni ellipse if Math.random() > some float value, like 0.6. In this case, there was a 40% chance of pepperoni showing up in the possible spot.
 * We found math equations to be really helpful to consider. For example, when we were trying to determine the region that toppings could appear, we used nested for loops checking through x and y coordinates and also checked if they were within the pizza by using the equation of a circle, its center, and its radius.
+* You can check if two values have the same sign with one condition: check if their product is positive. The only case where you need to be careful about is if either value is 0.
+* We realized we could use the indexOf() method of a String to check the presence of toppings after popping them from a stack and concatenation in a String. Doing so was helpful for our score calculation algorithm.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
 * iterator added
-* realization of usage of linkedlist
+* We changed our statiosn to be stored in a linkedlist because it followed well with our game progression.
 * started with Processing, but thought it would be easier to get down the underlying aspects of the game before graphics so moved to Java
 * NO MORE LOOPS, while loops are tricky in Processing because methods like keyPressed() and draw() are being constantly run. While loops are particularly tricky for user input (for example, waiting for the user to click in a certain area).
 * Changed mouse input to key input to transition between scenes because we were more successful initially with key input and ran into less problems. There are also very specificly defined different keys, so each one can be assigned a different function or purpose, and we only need an if/else-if block within keyPressed() to redirect between all the keys. 
@@ -44,10 +46,10 @@ we changed ___ to ___ bc...
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
-* UML diagram before coding is very helpful!! (flesh out this point later)
+* UML diagram before coding is very helpful!! It works as a sort of checklist. However, spending a bit too much time on planning specifics somewhat backfired for us, because it tied us down to some inefficient algorithms and was less flexible about change. We ended up having to remove overly complicated methods and useless instance variables that we didn't realize could be accomplished more cleanly.
 * Queue is an interface and therefore abstract. If you want to use a Queue, you need to use one of its implementations (something that implements the Queue interface), or else you won't be able to construct it nor use enqueue/dequeue/etc methods
 * Because Processing converts code into Java code, all code inside a .pde file will become code inside a class with the same name as the file. This means any class we declare inside .pde must not have the same name as the file. 
-* There can only be one setup() in the whole project (can be clarified)
+* There can only be one setup() in the whole project
 * setup() is only run once, so listening for keyboard/mouse inputs is not possible here. That can only be done inside draw(), which checks more than once.
 * remember that if we set an object to another object, it's only an alias to it unless we copy it fully or the variable is a primitive
 * posting to Piazza earlier can save us a lot of time, and can help us understand the problem better since we have to explain the issue to someone
