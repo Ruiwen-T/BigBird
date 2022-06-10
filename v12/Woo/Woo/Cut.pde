@@ -1,17 +1,15 @@
-import java.util.Stack;
 import java.util.Queue;
 
-public class ToppingS implements Station {
+public class Cut implements Station {
   private boolean done;
-  private Stack<Topping> toppings;
+  private int cuts;
   private String name;
 
-  public ToppingS(String n){
+  public Cut(String n){
     name = n;
     done = false;
-    toppings = new Stack<Topping>();
+    cuts = 0;
   }
-
   public void showOrder(LLQueue<Pizza> q) {
     Pizza p = q.peekFront();
     fill(255);
@@ -25,18 +23,17 @@ public class ToppingS implements Station {
   public void loadScene() {
     background(0);
     fill(255);
-    rect(10, 270, 200, 270);
+    rect(10, 270, 200, 125);
     fill(0);
-    text("Instructions:\nAdd the toppings\nrequested by the\ncustomer.", 20, 290);
-    text("Make sure to only\nadd the requested\ntoppings once, and\nin the correct\norder\n(top to bottom).", 20, 350);
-    text("Tomato sauce: w\nCheese: e\nPepperoni: r\nSausage: t\nBacon: y\nPineappple: u\nMushroom: i\nOlive: o", 20, 440);
+    text("Instructions:\nCut the pizza\nby clicking on\none side of the\npizza, then\nanother.\nMake the number\nof cuts specified.", 20, 290);
     textAlign(CENTER);
     fill(255);
-    text("Toppings", 480, 30);
-    text("Done adding the toppings?", 480, 500);
+    text("Cut", 480, 30);
+    text("Ready to serve the current pizza?", 480, 500);
     rect(415,525,130,50);
     fill(0,200,0);
-    text("Press ENTER",480,555);
+    textAlign(CENTER);
+    text("Press s,\nthen ENTER",480,550);
   }
 
   public boolean done() {
@@ -45,6 +42,10 @@ public class ToppingS implements Station {
 
   public String getName(){
     return name;
+  }
+
+  public int getCuts(){
+    return cuts;
   }
   
   public void setDone(boolean b){

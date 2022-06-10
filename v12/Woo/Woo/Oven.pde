@@ -1,15 +1,14 @@
-import java.util.Stack;
 import java.util.Queue;
 
-public class ToppingS implements Station {
+public class Oven implements Station {
   private boolean done;
-  private Stack<Topping> toppings;
+  private int time;
   private String name;
 
-  public ToppingS(String n){
+  public Oven(String n){
     name = n;
     done = false;
-    toppings = new Stack<Topping>();
+    time = 0;
   }
 
   public void showOrder(LLQueue<Pizza> q) {
@@ -25,15 +24,13 @@ public class ToppingS implements Station {
   public void loadScene() {
     background(0);
     fill(255);
-    rect(10, 270, 200, 270);
+    rect(10, 270, 200, 110);
     fill(0);
-    text("Instructions:\nAdd the toppings\nrequested by the\ncustomer.", 20, 290);
-    text("Make sure to only\nadd the requested\ntoppings once, and\nin the correct\norder\n(top to bottom).", 20, 350);
-    text("Tomato sauce: w\nCheese: e\nPepperoni: r\nSausage: t\nBacon: y\nPineappple: u\nMushroom: i\nOlive: o", 20, 440);
+    text("Instructions:\nCook the pizza for\nthe specified\namount of time.\nPress the\nappropriate\nnumber.", 20, 290);
     textAlign(CENTER);
     fill(255);
-    text("Toppings", 480, 30);
-    text("Done adding the toppings?", 480, 500);
+    text("Oven", 480, 30);
+    text("Done baking the pizza?", 480, 500);
     rect(415,525,130,50);
     fill(0,200,0);
     text("Press ENTER",480,555);
@@ -45,6 +42,10 @@ public class ToppingS implements Station {
 
   public String getName(){
     return name;
+  }
+  
+  public int getTime() {
+    return time;
   }
   
   public void setDone(boolean b){
