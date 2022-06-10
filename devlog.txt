@@ -27,7 +27,9 @@ wow! oo!...
 * Processing actually converts all code into Java code first, which can then run.
 * Our decision to make a boolean to make sure we couldn't run the keyPressed method more than once is useful for making sure that only one game could be run at a time.
 * Understanding what an alias is and how it works was a big lesson, since we were stuck on it for far too long, but after we realized what was happening, we realized why so much emphasis gets placed on this. 
-* We learned a lot about shapes in Processing, 
+* We learned a lot about shapes in Processing, especially because we worked with making pizza graphics. We played around with ellipses, arcs, triangles, and rectangles, and their parameters. We were able to create random orientations of shapes by multiplying dimensions and angles by random ranges.
+* We were able to create random distributions of topping shapes by adding a chance condition. For example, we'd only draw the pepperoni ellipse if Math.random() > some float value, like 0.6. In this case, there was a 40% chance of pepperoni showing up in the possible spot.
+* We found math equations to be really helpful to consider. For example, when we were trying to determine the region that toppings could appear, we used nested for loops checking through x and y coordinates and also checked if they were within the pizza by using the equation of a circle, its center, and its radius.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
