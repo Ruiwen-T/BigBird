@@ -14,16 +14,16 @@ class Cashier implements Station {
     Pizza p = q.peekFront();
     fill(255);
     rect(375, 200, 200, 250);
-    fill(50);
+    fill(0);
     textAlign(LEFT);
     text("Current order is:", 385, 220);
     text(p.toString(), 385, 240);
   }
 
   public void loadScene() {
-    background(129);
+    background(0);
     textAlign(CENTER);
-    fill(50);
+    fill(255);
     text("Cashier", 480, 30);
     text("Ready to make the current order?", 480, 500);
     rect(415,525,130,50);

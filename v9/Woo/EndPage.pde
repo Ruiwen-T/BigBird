@@ -1,6 +1,6 @@
 public class EndPage {
   public EndPage() {
-    background(123);
+    background(0);
   }
   
   public void display(int[] scores) {

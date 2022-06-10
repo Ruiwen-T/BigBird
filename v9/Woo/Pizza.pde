@@ -1,4 +1,5 @@
 import java.util.Stack;
+import java.util.ArrayList;
 
 public class Pizza {
   //stack of toppings in order:
@@ -59,6 +60,121 @@ public class Pizza {
   
   public void addTopping(Topping t) {
     toppings.push(t);
+  }
+  
+  public void drawPizza() {
+    noStroke();
+    ArrayList<Topping> topArr = new ArrayList<Topping>();
+    fill(242, 229, 191);
+    if (kneadClicks >= 20) {
+      fill(230, 220, 180);
+    }
+    ellipse(480.0, 280.0, 50.0+(8*kneadClicks), 50.0+(8*kneadClicks));
+    while (!toppings.isEmpty()) {
+      topArr.add(toppings.pop());
+    }
+    for (Topping t: topArr) {
+      println(t.getName());
+    }
+    
+    for (int i = topArr.size() - 1; i > -1; i--) {
+      toppings.push(topArr.get(i));
+      if (topArr.get(i).getName().equals("tomato")) {
+        fill(196, 27, 55);
+        ellipse(480.0, 280.0, 40 + 8*kneadClicks, 40 + 8*kneadClicks);
+      } else if (topArr.get(i).getName().equals("cheese")) {
+        stroke(245, 236, 188);
+        strokeWeight(3);
+        if (oven == 0) {
+          for (int x = 440-8*kneadClicks; x < 520+8*kneadClicks; x+=10) {
+            for (int y = 240-8*kneadClicks; y < 320+8*kneadClicks; y+=10) {
+              if (Math.pow(x - 480, 2) + Math.pow(y - 280, 2) < Math.pow(20 + 4*kneadClicks, 2) && Math.random() > 0.1) {
+                line((float)x, (float)y, (float)x + (float)Math.random() * 4 - 2, (float)y + (float)Math.random() * 4 - 2);
+              }
+            }
+          }
+        } else if (oven == 1) {
+          noStroke();
+          fill(252, 215, 119);
+          ellipse(480.0, 280.0, 32 + 8*kneadClicks, 32 + 8*kneadClicks);
+        } else if (oven == 2) {
+          noStroke();
+          fill(251, 206, 92);
+          ellipse(480.0, 280.0, 32 + 8*kneadClicks, 32 + 8*kneadClicks);
+        } else if (oven == 3) {
+          noStroke();
+          fill(245, 200, 90);
+          ellipse(480.0, 280.0, 32 + 8*kneadClicks, 32 + 8*kneadClicks);
+        }
+      } else if (topArr.get(i).getName().equals("pepperoni")) {
+        noStroke();
+        fill(166,25,25);
+        for (int x = 440-8*kneadClicks; x < 520+8*kneadClicks; x+=20) {
+          for (int y = 240-8*kneadClicks; y < 320+8*kneadClicks; y+=20) {
+            if (Math.pow(x - 480, 2) + Math.pow(y - 280, 2) < Math.pow(20 + 4*kneadClicks, 2) && Math.random() > 0.25) {
+              ellipse((float)x, (float)y, 12, 12);
+            }
+          }
+        }
+      } else if (topArr.get(i).getName().equals("sausage")) {
+        noStroke();
+        fill(151,128,80);
+        for (int x = 440-8*kneadClicks; x < 520+8*kneadClicks; x+=18) {
+          for (int y = 240-8*kneadClicks; y < 320+8*kneadClicks; y+=18) {
+            if (Math.pow(x - 480, 2) + Math.pow(y - 280, 2) < Math.pow(20 + 4*kneadClicks, 2) && Math.random() > 0.25) {
+              ellipse((float)x, (float)y, random(6, 12), random(6, 12));
+            }
+          }
+        }
+      } else if (topArr.get(i).getName().equals("bacon")) {
+        noStroke();
+        fill(181, 83, 90);
+        for (int x = 440-8*kneadClicks; x < 520+8*kneadClicks; x+=17) {
+          for (int y = 240-8*kneadClicks; y < 320+8*kneadClicks; y+=17) {
+            if (Math.pow(x - 480, 2) + Math.pow(y - 280, 2) < Math.pow(20 + 4*kneadClicks, 2) && Math.random() > 0.25) {
+              rect((float)x, (float)y, random(3, 7), random(4, 10));
+            }
+          }
+        }
+      } else if (topArr.get(i).getName().equals("pineapple")) {
+        noStroke();
+        fill(236, 225, 36);
+        for (int x = 440-8*kneadClicks; x < 520+8*kneadClicks; x+=17) {
+          for (int y = 240-8*kneadClicks; y < 320+8*kneadClicks; y+=17) {
+            if (Math.pow(x - 480, 2) + Math.pow(y - 280, 2) < Math.pow(20 + 4*kneadClicks, 2) && Math.random() > 0.25) {
+              float randX = x;
+              float randY = y; 
+              float randX2 = x + random(-8, 8); 
+              float randY2 = y + random(-8, 8);
+              
+              triangle(randX, randY, randX2, randY2, (randX + randX2)/2, random(5, 10) + (randY + randY2)/2);
+            }
+          }
+        }
+      } else if (topArr.get(i).getName().equals("mushroom")) {
+        noStroke();
+        fill(46, 37, 84);
+        for (int x = 440-8*kneadClicks; x < 520+8*kneadClicks; x+=17) {
+          for (int y = 240-8*kneadClicks; y < 320+8*kneadClicks; y+=17) {
+            if (Math.pow(x - 480, 2) + Math.pow(y - 280, 2) < Math.pow(20 + 4*kneadClicks, 2) && Math.random() > 0.60) {
+              float start = random(0, PI);
+              arc((float)x, (float)y, 20.0, 20.0, start, start + random(HALF_PI, PI));
+            }
+          }
+        }
+      } else if (topArr.get(i).getName().equals("olive")) {
+        stroke(17, 7, 43);
+        strokeWeight(2.2);
+        noFill();
+        for (int x = 440-8*kneadClicks; x < 520+8*kneadClicks; x+=17) {
+          for (int y = 240-8*kneadClicks; y < 320+8*kneadClicks; y+=17) {
+            if (Math.pow(x - 480, 2) + Math.pow(y - 280, 2) < Math.pow(20 + 4*kneadClicks, 2) && Math.random() > 0.40) {
+              ellipse(x, y, 7, 7);
+            }
+          }
+        }
+      }
+    }
   }
 
   public String toString() {

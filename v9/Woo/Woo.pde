@@ -1,7 +1,7 @@
 //BigBird: Jun Hong Wang, Raven (Ruiwen) Tang, Michael Kamela
 //APCS pd6
-//Final Project v3
-//2022-06-02
+//Final Project v9
+//2022-06-09
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -10,7 +10,6 @@ import java.util.Iterator;
 
 //instance variables
 LLQueue<Pizza> orders;
-LLQueue<Pizza> pizzas;
 LinkedList<Station> stations;
 int currStation;
 int[] scores;
@@ -45,9 +44,6 @@ void setup() {
       orders.enqueue((Pizza)genPizza());
     }
   
-    //initializing empty queue of pizzas
-    pizzas = new LLQueue<Pizza>();
-  
     //initializing stations
     stations = new LinkedList<Station>();
     stations.add(new Cashier("cashier"));
@@ -55,7 +51,7 @@ void setup() {
     stations.add(new ToppingS("toppingS"));
     stations.add(new Oven("oven"));
     stations.add(new Cut("cut"));
-    stations.add(new Serve("serve"));
+    //stations.add(new Serve("serve"));
     
     scores = new int[6];
     doughClicks = 0;
@@ -128,73 +124,64 @@ void keyPressed() {
       //once correct, change color a little?
       userAttempt.incrementK();
       println(userAttempt.getK());
-      //maybe don't auto advance the game to make it harder?
-      if (userAttempt.getK() >= 20) {
-        next = it.next();
-        currStation++;
-        next.loadScene();
-        next.showOrder(orders);
-      }
     } else if (currStation == 2) {
       char letter = key;
       switch (letter) {
         case 'w':
           Topping tomato = new Topping("tomato");
           userAttempt.addTopping(tomato);
-          println("tomato");
+          //println("tomato");
           break;
         case 'e':
           Topping cheese = new Topping("cheese");
           userAttempt.addTopping(cheese);
-          println("cheese");
+          //println("cheese");
           break;
         case 'r':
           Topping pepperoni = new Topping("pepperoni");
           userAttempt.addTopping(pepperoni);
-          println("pepperoni");
+          //println("pepperoni");
           break;
         case 't':
           Topping sausage = new Topping("sausage");
           userAttempt.addTopping(sausage);
-          println("sausage");
+          //println("sausage");
           break;
         case 'y':
           Topping bacon = new Topping("bacon");
           userAttempt.addTopping(bacon);
-          println("bacon");
+          //println("bacon");
           break;
         case 'u':
           Topping pineapple = new Topping("pineapple");
           userAttempt.addTopping(pineapple);
-          println("pineapple");
+          //println("pineapple");
           break;
         case 'i':
           Topping mushroom = new Topping("mushroom");
           userAttempt.addTopping(mushroom);
-          println("mushroom");
+          //println("mushroom");
           break;
         case 'o':
           Topping olive = new Topping("olive");
           userAttempt.addTopping(olive);
-          println("olive");
+          //println("olive");
           break;
       }
     } else if (currStation == 3) {
       if (key == '1') {
         userAttempt.setOven(1);
-        println("bake" + 1);
+        //println("bake" + 1);
       } else if (key == '2') {
         userAttempt.setOven(2);
-        println("bake" + 2);
+        //println("bake" + 2);
       }
       else if (key == '3') {
         userAttempt.setOven(3);
-        println("bake" + 3);
+        //println("bake" + 3);
       }
-      text(userAttempt.toString(), 300, 300);
+      //text(userAttempt.toString(), 300, 300);
     } else if (currStation == 4) {
-      
-    } else if (currStation == 5) {
       if (key == 's') {
         Pizza anskey = orders.dequeue();
         //then compare user's attempt with anskey
@@ -210,7 +197,13 @@ void keyPressed() {
         it = stations.iterator();
       }
     }
+    if (currStation == -1) {
+      userAttempt = new Pizza();
+    }
     println(currStation);
+    if (currStation > 0) {
+      userAttempt.drawPizza();
+    }
   }
   else if (orders.isEmpty()) {
     //SCORE STUFF
@@ -220,6 +213,8 @@ void keyPressed() {
 }
 
 void mousePressed() {
+  stroke(0);
+  strokeWeight(3);
   if (currStation == 4) {
     clicks++;
     if (clicks % 2 == 0) {

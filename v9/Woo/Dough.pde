@@ -15,19 +15,20 @@ public class Dough implements Station {
     Pizza p = q.peekFront();
     fill(255);
     rect(10, 10, 200, 250);
-    fill(50);
+    fill(0);
     textAlign(LEFT);
     text("Current order is:", 20, 30);
     text(p.toString(), 20, 50);
   }
 
   public void loadScene() {
-    background(129);
+    background(0);
     fill(255);
     rect(10, 270, 200, 70);
-    fill(50);
+    fill(0);
     text("Instructions:\nPress D 20 times\nto knead the\ndough.", 20, 290);
     textAlign(CENTER);
+    fill(255);
     text("Dough", 480, 30);
     text("Done kneading the dough?", 480, 500);
     rect(415,525,130,50);

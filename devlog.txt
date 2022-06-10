@@ -169,4 +169,6 @@ Jun Hong :: Added user input for Topping and Oven Stations
 Jun Hong :: Added comments for how to simplify code and improve workflow (to make it in time for demotime)
 All :: Implemented user input for Cut Station, added scores
 Jun Hong :: Added to scores method, added EndPage class that will be displayed at the end of the game.
+All :: Finished scores method, got graphics to work for drawing pizza, tested scores and graphics, gameplay of whole game, practiced demo
+All :: Completed game, but may still add features
 ==============================================================

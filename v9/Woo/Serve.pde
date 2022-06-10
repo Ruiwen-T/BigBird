@@ -13,16 +13,16 @@ public class Serve implements Station {
     Pizza p = q.peekFront();
     fill(255);
     rect(10, 10, 200, 250);
-    fill(50);
+    fill(0);
     textAlign(LEFT);
     text("Current order is:", 20, 30);
     text(p.toString(), 20, 50);
   }
 
   public void loadScene() {
-    background(129);
+    background(0);
     textAlign(CENTER);
-    fill(50);
+    fill(255);
     text("Serve", 480, 30);
     text("Ready to serve the current pizza?", 480, 500);
     rect(415,525,130,50);
