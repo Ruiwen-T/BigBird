@@ -1,40 +1,34 @@
 import java.util.Queue;
+import java.util.Stack;
 
-public class Dough implements Station {
+class Cashier implements Station {
   private boolean done;
-  private int clickCount;
   private String name;
 
-  public Dough(String n){
+  public Cashier(String n) {
     name = n;
     done = false;
-    clickCount = 0;
   }
 
   public void showOrder(LLQueue<Pizza> q) {
     Pizza p = q.peekFront();
     fill(255);
-    rect(10, 10, 200, 250);
+    rect(375, 200, 200, 250);
     fill(0);
     textAlign(LEFT);
-    text("Current order is:", 20, 30);
-    text(p.toString(), 20, 50);
+    text("Current order is:", 385, 220);
+    text(p.toString(), 385, 240);
   }
 
   public void loadScene() {
     background(0);
-    fill(255);
-    rect(10, 270, 200, 70);
-    fill(0);
-    text("Instructions:\nPress D 20 times\nto knead the\ndough.", 20, 290);
     textAlign(CENTER);
     fill(255);
-    text("Dough", 480, 30);
-    text("Done kneading the dough?", 480, 500);
+    text("Cashier", 480, 30);
+    text("Ready to make the current order?", 480, 500);
     rect(415,525,130,50);
     fill(0,200,0);
     text("Press ENTER",480,555);
-    
   }
 
   public boolean done() {
@@ -44,12 +38,12 @@ public class Dough implements Station {
   public String getName(){
     return name;
   }
-
-  public int getClickCount() {
-    return clickCount;
-  }
   
   public void setDone(boolean b){
     done = b;
+  }
+  
+  public void play() {
+    
   }
 }

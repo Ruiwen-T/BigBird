@@ -1,16 +1,15 @@
 import java.util.Queue;
 
-public class Dough implements Station {
+public class Cut implements Station {
   private boolean done;
-  private int clickCount;
+  private int cuts;
   private String name;
 
-  public Dough(String n){
+  public Cut(String n){
     name = n;
     done = false;
-    clickCount = 0;
+    cuts = 0;
   }
-
   public void showOrder(LLQueue<Pizza> q) {
     Pizza p = q.peekFront();
     fill(255);
@@ -24,17 +23,17 @@ public class Dough implements Station {
   public void loadScene() {
     background(0);
     fill(255);
-    rect(10, 270, 200, 70);
+    rect(10, 270, 200, 125);
     fill(0);
-    text("Instructions:\nPress D 20 times\nto knead the\ndough.", 20, 290);
+    text("Instructions:\nCut the pizza\nby clicking on\none side of the\npizza, then\nanother.\nMake the number\nof cuts specified.", 20, 290);
     textAlign(CENTER);
     fill(255);
-    text("Dough", 480, 30);
-    text("Done kneading the dough?", 480, 500);
+    text("Cut", 480, 30);
+    text("Ready to serve the current pizza?", 480, 500);
     rect(415,525,130,50);
     fill(0,200,0);
-    text("Press ENTER",480,555);
-    
+    textAlign(CENTER);
+    text("Press s,\nthen ENTER",480,550);
   }
 
   public boolean done() {
@@ -45,8 +44,12 @@ public class Dough implements Station {
     return name;
   }
 
-  public int getClickCount() {
-    return clickCount;
+  public int getCuts(){
+    return cuts;
+  }
+  
+  public void play() {
+    
   }
   
   public void setDone(boolean b){

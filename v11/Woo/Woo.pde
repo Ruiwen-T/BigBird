@@ -1,6 +1,6 @@
 //BigBird: Jun Hong Wang, Raven (Ruiwen) Tang, Michael Kamela
 //APCS pd6
-//Final Project v12
+//Final Project v11
 //2022-06-10
 
 import java.util.LinkedList;
@@ -25,11 +25,9 @@ int prevY;
 int currX;
 int currY;
 int pizzaNum;
-boolean hardMode;
 
 void setup() {
   gameStarted = false;
-  hardMode = false;
   //initializing array of toppings for future use
     toppings = new Topping[6];
     toppings[0] = new Topping("pepperoni");
@@ -100,9 +98,6 @@ Pizza genPizza() {
 void keyPressed() {
   if (!gameStarted) {
     gameStarted = true;
-    if(key == 'h'){
-      hardMode = true;
-    }
     it = stations.iterator();
     currStation = -1;
     userAttempt = new Pizza();
@@ -121,11 +116,8 @@ void keyPressed() {
       if(it.hasNext()){
         next = it.next();
         currStation++;
-        textAlign(LEFT);
         next.loadScene();
-        if(currStation == 0 || !hardMode){
-          next.showOrder(orders);
-        }
+        next.showOrder(orders);
       }
     } else if (key == 'd' && currStation == 1) {
       //possibly show the pizza as a small ellipse, with each click gradually making the pizza bigger

@@ -16,7 +16,7 @@ class Instructions {
     text("Each order will contain the customer's preferences for toppings, baking, and cutting",  480, 425);
     text("Your job is to work through the stations to the best of your ability to make the pizza and see if the customer is satisfied with it", 480, 450);
     textFont(font, 15);
-    text("After reading the instructions, press any key to start playing!\nIf you'd like hard mode, press H.", 480, 475);
+    text("After reading the instructions, press any key to start playing!", 480, 475);
     text("Made with <3 by Team BigBird\nJun Hong Wang, Raven (Ruiwen) Tang, and Michael Kamela", 480, 600);
   }
 }
