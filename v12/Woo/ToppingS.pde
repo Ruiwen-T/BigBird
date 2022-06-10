@@ -4,8 +4,6 @@ import java.util.Queue;
 public class ToppingS implements Station {
   private boolean done;
   private Stack<Topping> toppings;
-  private int[] clickEvenness;
-  private int[][] clickCount;
   private String name;
 
   public ToppingS(String n){
@@ -50,18 +48,6 @@ public class ToppingS implements Station {
 
   public String getName(){
     return name;
-  }
-  
-  public int[][] getClickCount() {
-    return clickCount;
-  }
-
-  public int[] getClickEvenness() {
-    return clickEvenness;
-  }
-
-  public void play() {
-    
   }
   
   public void setDone(boolean b){

@@ -48,10 +48,6 @@ public class Oven implements Station {
     return time;
   }
   
-  public void play() {
-    
-  }
-  
   public void setDone(boolean b){
     done = b;
   }

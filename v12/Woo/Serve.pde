@@ -38,14 +38,6 @@ public class Serve implements Station {
     return name;
   }
   
-  public double checkPizza(LLQueue orders, LLQueue pizzas) {
-    return -1.0;
-  }
-
-  public void play() {
-    
-  }
-  
   public void setDone(boolean b){
     done = b;
   }
