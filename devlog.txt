@@ -6,25 +6,6 @@ pd 6
 ---------------------
 Birdie's Mockeria
 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-USAGE:
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete this instruction block once all teammates understand usage.
-
-devlog--
-Use keyboard shortcut to jump to end,
- replicate entry template,
- modify appropriately.
-
-zone of reflection--
-Flesh out each category whenever necessary, appropriate.
- Need not be fully filled in until end of project,
- but best done as you go along.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
 OBSTACLES OVERCOME
@@ -37,6 +18,8 @@ UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
+* We'd like to make the scoring algorithm a bit more advanced, taking into account things like evenness of the cuts. We were thinking of calculating cut evenness/symmetry by finding the midpoint of user clicks and finding distance from the center of the circle. However, we didn't end up having that much time to work on this aspect.
+* In the future, we'd also like to make it possible to work on different pizzas at the same time and travel between stations more freely (for example, in the original Papa's Pizzeria, you're able to move away from a station while you're waiting for a pizza to bake and start the dough for a new pizza). 
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,6 +27,7 @@ wow! oo!...
 * Processing actually converts all code into Java code first, which can then run.
 * Our decision to make a boolean to make sure we couldn't run the keyPressed method more than once is useful for making sure that only one game could be run at a time.
 * Understanding what an alias is and how it works was a big lesson, since we were stuck on it for far too long, but after we realized what was happening, we realized why so much emphasis gets placed on this. 
+* We learned a lot about shapes in Processing, 
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -123,31 +107,30 @@ Michael :: Brought Pizza class to compilation success, implemented and tested ge
 
 2022-06-02
 --------------------------------------------------------------
-All :: Updated UML diagrams with new methods and instance variables
-All :: Updated Woo constructor with beginning of gameplay and created LL of stations
-All :: Began work on v2, now with use of Iterator
-Jun Hong :: Began working in Processing again, beginning with graphics
-Jun Hong :: Made Woo a driver file, with only setup() and draw(), moved actual code to Game
+Jun Hong :: Began working in Processing again, beginning with graphics, made Woo a driver file, with only setup() and draw(), moved actual code to Game, Updated UML diagrams with new methods and instance variables, Updated Woo constructor with beginning of gameplay and created LL of stations, Began work on v2, now with use of Iterator
+Raven :: Updated UML diagrams with new methods and instance variables, Updated Woo constructor with beginning of gameplay and created LL of stations, Began work on v2, now with use of Iterator
+Michael :: Updated UML diagrams with new methods and instance variables
 ==============================================================
 
 2022-06-03
 --------------------------------------------------------------
-All :: Made instructions class, started putting background color and text into processing
-All :: Attempted to fix game play method
+Jun Hong :: Made instructions class, started putting background color and text into processing, Attempted to fix game play method
+Raven :: Made instructions class, started putting background color and text into processing, Attempted to fix game play method
+Michael :: Made instructions class, started putting background color and text into processing, Attempted to fix game play method
 ==============================================================
 
 2022-06-05
 --------------------------------------------------------------
-All :: Made presentable instructions page
-All :: Made key input to change from instruction to first scene of game, implemented loadScene method of Cashier.
-All :: Encountered problem with displaying toppings in toString method of Pizza.
-All :: Attempted to troubleshoot problem
+Jun Hong :: Made presentable instructions page, Made key input to change from instruction to first scene of game, implemented loadScene method of Cashier, Encountered problem with displaying toppings in toString method of Pizza, Attempted to troubleshoot problem
+Raven :: Made presentable instructions page, Made key input to change from instruction to first scene of game, implemented loadScene method of Cashier, Encountered problem with displaying toppings in toString method of Pizza, Attempted to troubleshoot problem
+Michael :: Made presentable instructions page, Made key input to change from instruction to first scene of game, implemented loadScene method of Cashier, Encountered problem with displaying toppings in toString method of Pizza, Attempted to troubleshoot problem
 ==============================================================
 
 2022-06-06
 --------------------------------------------------------------
-All :: Attempted to fix showOrder problem, reworked toString method and constructor for Pizza, processing text
-All :: Fixed showOrder problem, realized it was a problem with how Java handled aliases for objects, cleaned up Pizza toString method
+Jun Hong :: Attempted to fix showOrder problem, reworked toString method and constructor for Pizza, processing text, Fixed showOrder problem, realized it was a problem with how Java handled aliases for objects, cleaned up Pizza toString method
+Raven :: Attempted to fix showOrder problem, reworked toString method and constructor for Pizza, processing text, Fixed showOrder problem, realized it was a problem with how Java handled aliases for objects, cleaned up Pizza toString method
+Michael :: Attempted to fix showOrder problem, reworked toString method and constructor for Pizza, processing text
 ==============================================================
 
 2022-06-07
@@ -171,4 +154,7 @@ All :: Implemented user input for Cut Station, added scores
 Jun Hong :: Added to scores method, added EndPage class that will be displayed at the end of the game.
 All :: Finished scores method, got graphics to work for drawing pizza, tested scores and graphics, gameplay of whole game, practiced demo
 All :: Completed game, but may still add features
+Raven :: Added confetti to end page, byline to instructions & end page, and hard mode (order doesn't show up after cashier).
+Raven :: Updated UML diagrams and flowcharts.
+Raven :: Updated Zone of Reflection in devlog
 ==============================================================
