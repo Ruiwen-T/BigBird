@@ -48,10 +48,6 @@ public class Cut implements Station {
     return cuts;
   }
   
-  public void play() {
-    
-  }
-  
   public void setDone(boolean b){
     done = b;
   }

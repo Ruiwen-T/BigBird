@@ -42,8 +42,4 @@ class Cashier implements Station {
   public void setDone(boolean b){
     done = b;
   }
-  
-  public void play() {
-    
-  }
 }
